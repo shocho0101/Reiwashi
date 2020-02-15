@@ -14,7 +14,6 @@ jobs:
     - name: Show Xcode version
       run: xcodebuild -version
     - name: Cache Carthage files
-      id: cache-carthage
       uses: actions/cache@v1
       with:
         path: Carthage
@@ -22,7 +21,6 @@ jobs:
         restore-keys: |
           ${{ runner.os }}-carthage-
     - name: Carthage
-      if: steps.cache-carthage.outputs.cache-hit != 'true'
       run: carthage bootstrap --platform iOS --cache-builds
     - name: Build 
       run: xcodebuild -sdk iphonesimulator -configuration Debug build 
