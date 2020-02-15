@@ -1,0 +1,595 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CAFE98CD23F78DC400F19152 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFE98CC23F78DC400F19152 /* AppDelegate.swift */; };
+		CAFE98CF23F78DC400F19152 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFE98CE23F78DC400F19152 /* SceneDelegate.swift */; };
+		CAFE98D123F78DC400F19152 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFE98D023F78DC400F19152 /* ViewController.swift */; };
+		CAFE98D423F78DC400F19152 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAFE98D223F78DC400F19152 /* Main.storyboard */; };
+		CAFE98D623F78DC700F19152 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CAFE98D523F78DC700F19152 /* Assets.xcassets */; };
+		CAFE98D923F78DC700F19152 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAFE98D723F78DC700F19152 /* LaunchScreen.storyboard */; };
+		CAFE98E423F78DC700F19152 /* ReiwashiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFE98E323F78DC700F19152 /* ReiwashiTests.swift */; };
+		CAFE98EF23F78DC700F19152 /* ReiwashiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFE98EE23F78DC700F19152 /* ReiwashiUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CAFE98E023F78DC700F19152 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CAFE98C123F78DC400F19152 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CAFE98C823F78DC400F19152;
+			remoteInfo = Reiwashi;
+		};
+		CAFE98EB23F78DC700F19152 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CAFE98C123F78DC400F19152 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CAFE98C823F78DC400F19152;
+			remoteInfo = Reiwashi;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CAFE98C923F78DC400F19152 /* Reiwashi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Reiwashi.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CAFE98CC23F78DC400F19152 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CAFE98CE23F78DC400F19152 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		CAFE98D023F78DC400F19152 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CAFE98D323F78DC400F19152 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CAFE98D523F78DC700F19152 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CAFE98D823F78DC700F19152 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CAFE98DA23F78DC700F19152 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CAFE98DF23F78DC700F19152 /* ReiwashiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReiwashiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CAFE98E323F78DC700F19152 /* ReiwashiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReiwashiTests.swift; sourceTree = "<group>"; };
+		CAFE98E523F78DC700F19152 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CAFE98EA23F78DC700F19152 /* ReiwashiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReiwashiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CAFE98EE23F78DC700F19152 /* ReiwashiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReiwashiUITests.swift; sourceTree = "<group>"; };
+		CAFE98F023F78DC700F19152 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CAFE98C623F78DC400F19152 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CAFE98DC23F78DC700F19152 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CAFE98E723F78DC700F19152 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CAFE98C023F78DC300F19152 = {
+			isa = PBXGroup;
+			children = (
+				CAFE98CB23F78DC400F19152 /* Reiwashi */,
+				CAFE98E223F78DC700F19152 /* ReiwashiTests */,
+				CAFE98ED23F78DC700F19152 /* ReiwashiUITests */,
+				CAFE98CA23F78DC400F19152 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CAFE98CA23F78DC400F19152 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CAFE98C923F78DC400F19152 /* Reiwashi.app */,
+				CAFE98DF23F78DC700F19152 /* ReiwashiTests.xctest */,
+				CAFE98EA23F78DC700F19152 /* ReiwashiUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CAFE98CB23F78DC400F19152 /* Reiwashi */ = {
+			isa = PBXGroup;
+			children = (
+				CAFE98CC23F78DC400F19152 /* AppDelegate.swift */,
+				CAFE98CE23F78DC400F19152 /* SceneDelegate.swift */,
+				CAFE98D023F78DC400F19152 /* ViewController.swift */,
+				CAFE98D223F78DC400F19152 /* Main.storyboard */,
+				CAFE98D523F78DC700F19152 /* Assets.xcassets */,
+				CAFE98D723F78DC700F19152 /* LaunchScreen.storyboard */,
+				CAFE98DA23F78DC700F19152 /* Info.plist */,
+			);
+			path = Reiwashi;
+			sourceTree = "<group>";
+		};
+		CAFE98E223F78DC700F19152 /* ReiwashiTests */ = {
+			isa = PBXGroup;
+			children = (
+				CAFE98E323F78DC700F19152 /* ReiwashiTests.swift */,
+				CAFE98E523F78DC700F19152 /* Info.plist */,
+			);
+			path = ReiwashiTests;
+			sourceTree = "<group>";
+		};
+		CAFE98ED23F78DC700F19152 /* ReiwashiUITests */ = {
+			isa = PBXGroup;
+			children = (
+				CAFE98EE23F78DC700F19152 /* ReiwashiUITests.swift */,
+				CAFE98F023F78DC700F19152 /* Info.plist */,
+			);
+			path = ReiwashiUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CAFE98C823F78DC400F19152 /* Reiwashi */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CAFE98F323F78DC700F19152 /* Build configuration list for PBXNativeTarget "Reiwashi" */;
+			buildPhases = (
+				CAFE98C523F78DC400F19152 /* Sources */,
+				CAFE98C623F78DC400F19152 /* Frameworks */,
+				CAFE98C723F78DC400F19152 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Reiwashi;
+			productName = Reiwashi;
+			productReference = CAFE98C923F78DC400F19152 /* Reiwashi.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CAFE98DE23F78DC700F19152 /* ReiwashiTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CAFE98F623F78DC700F19152 /* Build configuration list for PBXNativeTarget "ReiwashiTests" */;
+			buildPhases = (
+				CAFE98DB23F78DC700F19152 /* Sources */,
+				CAFE98DC23F78DC700F19152 /* Frameworks */,
+				CAFE98DD23F78DC700F19152 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CAFE98E123F78DC700F19152 /* PBXTargetDependency */,
+			);
+			name = ReiwashiTests;
+			productName = ReiwashiTests;
+			productReference = CAFE98DF23F78DC700F19152 /* ReiwashiTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CAFE98E923F78DC700F19152 /* ReiwashiUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CAFE98F923F78DC700F19152 /* Build configuration list for PBXNativeTarget "ReiwashiUITests" */;
+			buildPhases = (
+				CAFE98E623F78DC700F19152 /* Sources */,
+				CAFE98E723F78DC700F19152 /* Frameworks */,
+				CAFE98E823F78DC700F19152 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CAFE98EC23F78DC700F19152 /* PBXTargetDependency */,
+			);
+			name = ReiwashiUITests;
+			productName = ReiwashiUITests;
+			productReference = CAFE98EA23F78DC700F19152 /* ReiwashiUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CAFE98C123F78DC400F19152 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = 2222_d;
+				TargetAttributes = {
+					CAFE98C823F78DC400F19152 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+					CAFE98DE23F78DC700F19152 = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = CAFE98C823F78DC400F19152;
+					};
+					CAFE98E923F78DC700F19152 = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = CAFE98C823F78DC400F19152;
+					};
+				};
+			};
+			buildConfigurationList = CAFE98C423F78DC400F19152 /* Build configuration list for PBXProject "Reiwashi" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CAFE98C023F78DC300F19152;
+			productRefGroup = CAFE98CA23F78DC400F19152 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CAFE98C823F78DC400F19152 /* Reiwashi */,
+				CAFE98DE23F78DC700F19152 /* ReiwashiTests */,
+				CAFE98E923F78DC700F19152 /* ReiwashiUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CAFE98C723F78DC400F19152 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CAFE98D923F78DC700F19152 /* LaunchScreen.storyboard in Resources */,
+				CAFE98D623F78DC700F19152 /* Assets.xcassets in Resources */,
+				CAFE98D423F78DC400F19152 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CAFE98DD23F78DC700F19152 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CAFE98E823F78DC700F19152 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CAFE98C523F78DC400F19152 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CAFE98D123F78DC400F19152 /* ViewController.swift in Sources */,
+				CAFE98CD23F78DC400F19152 /* AppDelegate.swift in Sources */,
+				CAFE98CF23F78DC400F19152 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CAFE98DB23F78DC700F19152 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CAFE98E423F78DC700F19152 /* ReiwashiTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CAFE98E623F78DC700F19152 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CAFE98EF23F78DC700F19152 /* ReiwashiUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CAFE98E123F78DC700F19152 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CAFE98C823F78DC400F19152 /* Reiwashi */;
+			targetProxy = CAFE98E023F78DC700F19152 /* PBXContainerItemProxy */;
+		};
+		CAFE98EC23F78DC700F19152 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CAFE98C823F78DC400F19152 /* Reiwashi */;
+			targetProxy = CAFE98EB23F78DC700F19152 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CAFE98D223F78DC400F19152 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CAFE98D323F78DC400F19152 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CAFE98D723F78DC700F19152 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CAFE98D823F78DC700F19152 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CAFE98F123F78DC700F19152 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CAFE98F223F78DC700F19152 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CAFE98F423F78DC700F19152 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BV8VP6YGE9;
+				INFOPLIST_FILE = Reiwashi/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "jp.2222-d.Reiwashi";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CAFE98F523F78DC700F19152 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BV8VP6YGE9;
+				INFOPLIST_FILE = Reiwashi/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "jp.2222-d.Reiwashi";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		CAFE98F723F78DC700F19152 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BV8VP6YGE9;
+				INFOPLIST_FILE = ReiwashiTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "jp.2222-d.ReiwashiTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Reiwashi.app/Reiwashi";
+			};
+			name = Debug;
+		};
+		CAFE98F823F78DC700F19152 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BV8VP6YGE9;
+				INFOPLIST_FILE = ReiwashiTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "jp.2222-d.ReiwashiTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Reiwashi.app/Reiwashi";
+			};
+			name = Release;
+		};
+		CAFE98FA23F78DC700F19152 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BV8VP6YGE9;
+				INFOPLIST_FILE = ReiwashiUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "jp.2222-d.ReiwashiUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Reiwashi;
+			};
+			name = Debug;
+		};
+		CAFE98FB23F78DC700F19152 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BV8VP6YGE9;
+				INFOPLIST_FILE = ReiwashiUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "jp.2222-d.ReiwashiUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Reiwashi;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CAFE98C423F78DC400F19152 /* Build configuration list for PBXProject "Reiwashi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CAFE98F123F78DC700F19152 /* Debug */,
+				CAFE98F223F78DC700F19152 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CAFE98F323F78DC700F19152 /* Build configuration list for PBXNativeTarget "Reiwashi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CAFE98F423F78DC700F19152 /* Debug */,
+				CAFE98F523F78DC700F19152 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CAFE98F623F78DC700F19152 /* Build configuration list for PBXNativeTarget "ReiwashiTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CAFE98F723F78DC700F19152 /* Debug */,
+				CAFE98F823F78DC700F19152 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CAFE98F923F78DC700F19152 /* Build configuration list for PBXNativeTarget "ReiwashiUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CAFE98FA23F78DC700F19152 /* Debug */,
+				CAFE98FB23F78DC700F19152 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CAFE98C123F78DC400F19152 /* Project object */;
+}
