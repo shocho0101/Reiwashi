@@ -4,5 +4,5 @@
 
 ### Carthage
 ```
-carthage bootstrap --platform iOS --cache-builds
+$ carthage bootstrap --platform iOS --cache-builds
 ```
