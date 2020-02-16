@@ -7,10 +7,17 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 class AddHistoryViewController: UIViewController {
     
+    @IBOutlet var textField: UITextField!
+    @IBOutlet var addButton: UIButton!
+    
     let viewModel: ViewModel
+    
+    let disposeBag = DisposeBag()
     
     init() {
         self.viewModel = ViewModel()
@@ -26,18 +33,22 @@ class AddHistoryViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        bind()
     }
-
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    func bind() {
+        textField.rx.text
+            .orEmpty
+            .bind(to: viewModel.word)
+            .disposed(by: disposeBag)
+        
+        addButton.rx.tap
+            .bind(to: viewModel.addButtonTapped)
+            .disposed(by: disposeBag)
+        
+        viewModel.isButtonEnabled
+            .drive(addButton.rx.isEnabled)
+            .disposed(by: disposeBag)
     }
-    */
 
 }

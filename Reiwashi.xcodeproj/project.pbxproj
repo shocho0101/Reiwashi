@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CA06A3D923F9137D00999BAD /* DataGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA06A3D823F9137D00999BAD /* DataGateway.swift */; };
+		CA06A3DB23F9140500999BAD /* DataGatewayRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA06A3DA23F9140500999BAD /* DataGatewayRequest.swift */; };
+		CA06A3DE23F9153200999BAD /* AddWordDataGatewayRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA06A3DD23F9153200999BAD /* AddWordDataGatewayRequest.swift */; };
+		CA71FBD123F928FD00E9DE66 /* Action.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA71FBD023F928FD00E9DE66 /* Action.framework */; };
+		CA71FBD223F928FD00E9DE66 /* Action.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CA71FBD023F928FD00E9DE66 /* Action.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CAFE98CD23F78DC400F19152 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFE98CC23F78DC400F19152 /* AppDelegate.swift */; };
 		CAFE98CF23F78DC400F19152 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFE98CE23F78DC400F19152 /* SceneDelegate.swift */; };
 		CAFE98D623F78DC700F19152 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CAFE98D523F78DC700F19152 /* Assets.xcassets */; };
@@ -52,6 +57,7 @@
 			files = (
 				CAFE990223F795A400F19152 /* RxSwift.framework in Embed Frameworks */,
 				CAFE990023F795A400F19152 /* RxCocoa.framework in Embed Frameworks */,
+				CA71FBD223F928FD00E9DE66 /* Action.framework in Embed Frameworks */,
 				CAFE994723F8D2C100F19152 /* RxRelay.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -60,6 +66,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		CA06A3D823F9137D00999BAD /* DataGateway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataGateway.swift; sourceTree = "<group>"; };
+		CA06A3DA23F9140500999BAD /* DataGatewayRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataGatewayRequest.swift; sourceTree = "<group>"; };
+		CA06A3DD23F9153200999BAD /* AddWordDataGatewayRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWordDataGatewayRequest.swift; sourceTree = "<group>"; };
+		CA71FBD023F928FD00E9DE66 /* Action.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Action.framework; path = Carthage/Build/iOS/Action.framework; sourceTree = "<group>"; };
 		CAFE98C923F78DC400F19152 /* Reiwashi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Reiwashi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAFE98CC23F78DC400F19152 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CAFE98CE23F78DC400F19152 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -89,6 +99,7 @@
 			files = (
 				CAFE990123F795A400F19152 /* RxSwift.framework in Frameworks */,
 				CAFE98FF23F795A400F19152 /* RxCocoa.framework in Frameworks */,
+				CA71FBD123F928FD00E9DE66 /* Action.framework in Frameworks */,
 				CAFE994623F8D2C100F19152 /* RxRelay.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -110,6 +121,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CA06A3D723F9135F00999BAD /* DataGateway */ = {
+			isa = PBXGroup;
+			children = (
+				CA06A3D823F9137D00999BAD /* DataGateway.swift */,
+				CA06A3DC23F9150C00999BAD /* DataGatewayRequest */,
+			);
+			path = DataGateway;
+			sourceTree = "<group>";
+		};
+		CA06A3DC23F9150C00999BAD /* DataGatewayRequest */ = {
+			isa = PBXGroup;
+			children = (
+				CA06A3DA23F9140500999BAD /* DataGatewayRequest.swift */,
+				CA06A3DD23F9153200999BAD /* AddWordDataGatewayRequest.swift */,
+			);
+			path = DataGatewayRequest;
+			sourceTree = "<group>";
+		};
 		CAFE98C023F78DC300F19152 = {
 			isa = PBXGroup;
 			children = (
@@ -134,6 +163,7 @@
 		CAFE98CB23F78DC400F19152 /* Reiwashi */ = {
 			isa = PBXGroup;
 			children = (
+				CA06A3D723F9135F00999BAD /* DataGateway */,
 				CAFE995123F909BF00F19152 /* AddHistory */,
 				CAFE995023F909AC00F19152 /* History */,
 				CAFE98CC23F78DC400F19152 /* AppDelegate.swift */,
@@ -166,6 +196,7 @@
 		CAFE98FC23F795A400F19152 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CA71FBD023F928FD00E9DE66 /* Action.framework */,
 				CAFE994523F8D2C100F19152 /* RxRelay.framework */,
 				CAFE98FD23F795A400F19152 /* RxCocoa.framework */,
 				CAFE98FE23F795A400F19152 /* RxSwift.framework */,
@@ -333,6 +364,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RxRelay.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Action.framework",
 			);
 			outputFileListPaths = (
 			);
@@ -349,8 +381,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA06A3D923F9137D00999BAD /* DataGateway.swift in Sources */,
 				CAFE98CD23F78DC400F19152 /* AppDelegate.swift in Sources */,
+				CA06A3DB23F9140500999BAD /* DataGatewayRequest.swift in Sources */,
 				CAFE995323F90A3200F19152 /* AddHistoryViewModel.swift in Sources */,
+				CA06A3DE23F9153200999BAD /* AddWordDataGatewayRequest.swift in Sources */,
 				CAFE98CF23F78DC400F19152 /* SceneDelegate.swift in Sources */,
 				CAFE994323F8CE8900F19152 /* HistoryViewController.swift in Sources */,
 				CAFE994E23F909A400F19152 /* AddHistoryViewController.swift in Sources */,
