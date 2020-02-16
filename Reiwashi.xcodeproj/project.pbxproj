@@ -143,6 +143,15 @@
 			path = DataGatewayRequest;
 			sourceTree = "<group>";
 		};
+		CA471A6623F981B2000D438D /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				CAFE995123F909BF00F19152 /* AddHistory */,
+				CAFE995023F909AC00F19152 /* History */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
 		CA71FBD523F9799400E9DE66 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -177,8 +186,7 @@
 			isa = PBXGroup;
 			children = (
 				CA06A3D723F9135F00999BAD /* DataGateway */,
-				CAFE995123F909BF00F19152 /* AddHistory */,
-				CAFE995023F909AC00F19152 /* History */,
+				CA471A6623F981B2000D438D /* ViewControllers */,
 				CA71FBD523F9799400E9DE66 /* Extensions */,
 				CAFE98CC23F78DC400F19152 /* AppDelegate.swift */,
 				CAFE98CE23F78DC400F19152 /* SceneDelegate.swift */,
