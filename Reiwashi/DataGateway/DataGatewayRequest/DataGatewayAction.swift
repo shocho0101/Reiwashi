@@ -1,5 +1,5 @@
 //
-//  DataGatewayRequest.swift
+//  DataGatewayAction.swift
 //  Reiwashi
 //
 //  Created by 張翔 on 2020/02/16.

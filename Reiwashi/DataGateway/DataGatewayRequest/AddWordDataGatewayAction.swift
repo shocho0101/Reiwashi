@@ -1,5 +1,5 @@
 //
-//  AddWordDataGatewayRequest.swift
+//  AddWordDataGatewayAction.swift
 //  Reiwashi
 //
 //  Created by 張翔 on 2020/02/16.
@@ -11,7 +11,7 @@ import RxSwift
 import RxCocoa
 import Action
 
-struct AddWordDataGatewayRequest: DataGatewayAction {
+struct AddWordDataGatewayAction: DataGatewayAction {
     
     // TODO: implement this after api is ready
     func api() -> Action<String, Void> {

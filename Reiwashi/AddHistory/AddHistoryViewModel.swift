@@ -16,7 +16,7 @@ extension AddHistoryViewController {
         let word = BehaviorRelay<String>(value: "")
         let addButtonTapped = PublishRelay<Void>()
         
-        private let action = DataGateway.getAction(AddWordDataGatewayRequest())
+        private let action = DataGateway.getAction(AddWordDataGatewayAction())
         
         private let disposeBag = DisposeBag()
         
