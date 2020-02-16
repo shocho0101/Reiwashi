@@ -9,15 +9,16 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import SVProgressHUD
 
 class AddHistoryViewController: UIViewController {
     
     @IBOutlet var textField: UITextField!
     @IBOutlet var addButton: UIButton!
     
-    let viewModel: ViewModel
+    private let viewModel: ViewModel
     
-    let disposeBag = DisposeBag()
+    private let disposeBag = DisposeBag()
     
     init() {
         self.viewModel = ViewModel()
@@ -32,7 +33,8 @@ class AddHistoryViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        title = "追加"
+        
         bind()
     }
     
@@ -49,6 +51,20 @@ class AddHistoryViewController: UIViewController {
         viewModel.isButtonEnabled
             .drive(addButton.rx.isEnabled)
             .disposed(by: disposeBag)
+        
+        viewModel.showErrorAlert.drive { [weak self] in
+            let alert = UIAlertController.simpleAlert(title: "エラー", message: "登録できませんでした")
+            self?.present(alert, animated: true, completion: nil)
+        }
+        .disposed(by: disposeBag)
+        
+        viewModel.popViewController.drive { [weak self] in
+            self?.navigationController?.popViewController(animated: true)
+        }
+        .disposed(by: disposeBag)
+        
+        viewModel.showHud
+            .drive(SVProgressHUD.rx.isAnimating)
+            .disposed(by: disposeBag)
     }
-
 }

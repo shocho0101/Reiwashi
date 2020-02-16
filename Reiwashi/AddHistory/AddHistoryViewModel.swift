@@ -16,9 +16,9 @@ extension AddHistoryViewController {
         let word = BehaviorRelay<String>(value: "")
         let addButtonTapped = PublishRelay<Void>()
         
-        let action = DataGateway.getAction(AddWordDataGatewayRequest())
+        private let action = DataGateway.getAction(AddWordDataGatewayRequest())
         
-        let disposeBag = DisposeBag()
+        private let disposeBag = DisposeBag()
         
         init() {
             addButtonTapped
@@ -27,21 +27,29 @@ extension AddHistoryViewController {
                 .disposed(by: disposeBag)
         }
         
-        var showErrorMassage: Driver<Void> {
+        var showErrorAlert: Driver<Void> {
             return action.errors
                 .map { _ in () }
-                .asDriver(onErrorJustReturn: ())
+                .asDriver(onErrorDriveWith: .empty())
         }
         
-        var success: Driver<Void> {
+        var popViewController: Driver<Void> {
             return action.elements
-                .asDriver(onErrorJustReturn: ())
+                .asDriver(onErrorDriveWith: .empty())
         }
         
         var isButtonEnabled: Driver<Bool> {
-            return word
-                .map { $0.isEmpty }
-                .asDriver(onErrorJustReturn: false)
+            return Observable
+                .combineLatest(
+                    word.map { $0.isEmpty },
+                    action.executing)
+                .map { !$0 && !$1 }
+                .asDriver(onErrorDriveWith: .empty())
+        }
+        
+        var showHud: Driver<Bool> {
+            return action.executing
+                .asDriver(onErrorDriveWith: .empty())
         }
     }
 }

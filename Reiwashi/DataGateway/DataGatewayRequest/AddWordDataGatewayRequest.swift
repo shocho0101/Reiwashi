@@ -20,7 +20,7 @@ struct AddWordDataGatewayRequest: DataGatewayAction {
     
     func mock() -> Action<String, Void> {
         return .init { word -> Observable<Void> in
-            return Observable.just(())
+            return Observable.just(()).delay(.seconds(1), scheduler: MainScheduler.instance)
         }
     }
 }
