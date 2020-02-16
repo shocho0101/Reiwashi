@@ -21,6 +21,9 @@
 		CAFE994423F8CE8900F19152 /* HistoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CAFE994223F8CE8900F19152 /* HistoryViewController.xib */; };
 		CAFE994623F8D2C100F19152 /* RxRelay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAFE994523F8D2C100F19152 /* RxRelay.framework */; };
 		CAFE994723F8D2C100F19152 /* RxRelay.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CAFE994523F8D2C100F19152 /* RxRelay.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CAFE994E23F909A400F19152 /* AddHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFE994C23F909A400F19152 /* AddHistoryViewController.swift */; };
+		CAFE994F23F909A400F19152 /* AddHistoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CAFE994D23F909A400F19152 /* AddHistoryViewController.xib */; };
+		CAFE995323F90A3200F19152 /* AddHistoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFE995223F90A3200F19152 /* AddHistoryViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +77,9 @@
 		CAFE994123F8CE8900F19152 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		CAFE994223F8CE8900F19152 /* HistoryViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryViewController.xib; sourceTree = "<group>"; };
 		CAFE994523F8D2C100F19152 /* RxRelay.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxRelay.framework; path = Carthage/Build/iOS/RxRelay.framework; sourceTree = "<group>"; };
+		CAFE994C23F909A400F19152 /* AddHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddHistoryViewController.swift; sourceTree = "<group>"; };
+		CAFE994D23F909A400F19152 /* AddHistoryViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddHistoryViewController.xib; sourceTree = "<group>"; };
+		CAFE995223F90A3200F19152 /* AddHistoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddHistoryViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,10 +134,10 @@
 		CAFE98CB23F78DC400F19152 /* Reiwashi */ = {
 			isa = PBXGroup;
 			children = (
+				CAFE995123F909BF00F19152 /* AddHistory */,
+				CAFE995023F909AC00F19152 /* History */,
 				CAFE98CC23F78DC400F19152 /* AppDelegate.swift */,
 				CAFE98CE23F78DC400F19152 /* SceneDelegate.swift */,
-				CAFE994123F8CE8900F19152 /* HistoryViewController.swift */,
-				CAFE994223F8CE8900F19152 /* HistoryViewController.xib */,
 				CAFE98D523F78DC700F19152 /* Assets.xcassets */,
 				CAFE98D723F78DC700F19152 /* LaunchScreen.storyboard */,
 				CAFE98DA23F78DC700F19152 /* Info.plist */,
@@ -165,6 +171,25 @@
 				CAFE98FE23F795A400F19152 /* RxSwift.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CAFE995023F909AC00F19152 /* History */ = {
+			isa = PBXGroup;
+			children = (
+				CAFE994123F8CE8900F19152 /* HistoryViewController.swift */,
+				CAFE994223F8CE8900F19152 /* HistoryViewController.xib */,
+			);
+			path = History;
+			sourceTree = "<group>";
+		};
+		CAFE995123F909BF00F19152 /* AddHistory */ = {
+			isa = PBXGroup;
+			children = (
+				CAFE994C23F909A400F19152 /* AddHistoryViewController.swift */,
+				CAFE995223F90A3200F19152 /* AddHistoryViewModel.swift */,
+				CAFE994D23F909A400F19152 /* AddHistoryViewController.xib */,
+			);
+			path = AddHistory;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -276,6 +301,7 @@
 				CAFE98D923F78DC700F19152 /* LaunchScreen.storyboard in Resources */,
 				CAFE98D623F78DC700F19152 /* Assets.xcassets in Resources */,
 				CAFE994423F8CE8900F19152 /* HistoryViewController.xib in Resources */,
+				CAFE994F23F909A400F19152 /* AddHistoryViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -324,8 +350,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				CAFE98CD23F78DC400F19152 /* AppDelegate.swift in Sources */,
+				CAFE995323F90A3200F19152 /* AddHistoryViewModel.swift in Sources */,
 				CAFE98CF23F78DC400F19152 /* SceneDelegate.swift in Sources */,
 				CAFE994323F8CE8900F19152 /* HistoryViewController.swift in Sources */,
+				CAFE994E23F909A400F19152 /* AddHistoryViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -11,7 +11,7 @@ import UIKit
 class HistoryViewController: UIViewController {
     
     init() {
-        super.init(nibName: "HistoryViewController", bundle: Bundle(for: type(of: self)))
+        super.init(nibName: nil, bundle: Bundle(for: type(of: self)))
     }
     
     @available(*, unavailable)
