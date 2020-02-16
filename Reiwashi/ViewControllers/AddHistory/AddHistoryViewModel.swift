@@ -22,7 +22,10 @@ extension AddHistoryViewController {
         
         init() {
             addButtonTapped
+                .withLatestFrom(action.executing)
+                .filter { !$0 }
                 .withLatestFrom(word)
+                .filter { !$0.isEmpty }
                 .bind(to: action.inputs)
                 .disposed(by: disposeBag)
         }
@@ -39,8 +42,7 @@ extension AddHistoryViewController {
         }
         
         var isButtonEnabled: Driver<Bool> {
-            return Observable
-                .combineLatest(
+            return Observable.combineLatest(
                     word.map { $0.isEmpty },
                     action.executing)
                 .map { !$0 && !$1 }

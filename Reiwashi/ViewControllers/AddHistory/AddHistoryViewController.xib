@@ -28,7 +28,7 @@
                     <textInputTraits key="textInputTraits"/>
                 </textField>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cMM-Tf-hQg">
-                    <rect key="frame" x="191.5" y="688" width="31" height="30"/>
+                    <rect key="frame" x="191.5" y="326" width="31" height="30"/>
                     <state key="normal" title="追加"/>
                 </button>
             </subviews>
@@ -36,8 +36,8 @@
             <constraints>
                 <constraint firstItem="cMM-Tf-hQg" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="4vv-7P-zKK"/>
                 <constraint firstItem="kUz-Oe-2wJ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="24" id="DYK-s9-08b"/>
+                <constraint firstItem="cMM-Tf-hQg" firstAttribute="top" secondItem="kUz-Oe-2wJ" secondAttribute="bottom" constant="30" id="TRz-tG-djF"/>
                 <constraint firstAttribute="trailing" secondItem="kUz-Oe-2wJ" secondAttribute="trailing" constant="24" id="eoy-Di-u9X"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="cMM-Tf-hQg" secondAttribute="bottom" constant="144" id="gJz-U5-q0y"/>
                 <constraint firstItem="kUz-Oe-2wJ" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="216" id="laB-xX-et8"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>

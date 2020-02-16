@@ -35,6 +35,9 @@ class AddHistoryViewController: UIViewController {
         super.viewDidLoad()
         title = "追加"
         
+        textField.becomeFirstResponder()
+        textField.delegate = self
+        
         bind()
     }
     
@@ -68,5 +71,12 @@ class AddHistoryViewController: UIViewController {
         viewModel.showHud
             .drive(SVProgressHUD.rx.isAnimating)
             .disposed(by: disposeBag)
+    }
+}
+
+extension AddHistoryViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        viewModel.addButtonTapped.accept(())
+        return false
     }
 }

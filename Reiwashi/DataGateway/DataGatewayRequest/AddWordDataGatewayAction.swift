@@ -13,7 +13,7 @@ import Action
 
 struct AddWordDataGatewayAction: DataGatewayAction {
     
-    // TODO: implement this after api is ready
+    // TODO: APIができたら実装する
     func api() -> Action<String, Void> {
         fatalError("not implemented")
     }
