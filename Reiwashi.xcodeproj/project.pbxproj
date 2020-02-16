@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		CAFE98CD23F78DC400F19152 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFE98CC23F78DC400F19152 /* AppDelegate.swift */; };
 		CAFE98CF23F78DC400F19152 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFE98CE23F78DC400F19152 /* SceneDelegate.swift */; };
-		CAFE98D123F78DC400F19152 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFE98D023F78DC400F19152 /* ViewController.swift */; };
-		CAFE98D423F78DC400F19152 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAFE98D223F78DC400F19152 /* Main.storyboard */; };
 		CAFE98D623F78DC700F19152 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CAFE98D523F78DC700F19152 /* Assets.xcassets */; };
 		CAFE98D923F78DC700F19152 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAFE98D723F78DC700F19152 /* LaunchScreen.storyboard */; };
 		CAFE98E423F78DC700F19152 /* ReiwashiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFE98E323F78DC700F19152 /* ReiwashiTests.swift */; };
@@ -19,6 +17,10 @@
 		CAFE990023F795A400F19152 /* RxCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CAFE98FD23F795A400F19152 /* RxCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CAFE990123F795A400F19152 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAFE98FE23F795A400F19152 /* RxSwift.framework */; };
 		CAFE990223F795A400F19152 /* RxSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CAFE98FE23F795A400F19152 /* RxSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CAFE994323F8CE8900F19152 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFE994123F8CE8900F19152 /* HistoryViewController.swift */; };
+		CAFE994423F8CE8900F19152 /* HistoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CAFE994223F8CE8900F19152 /* HistoryViewController.xib */; };
+		CAFE994623F8D2C100F19152 /* RxRelay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAFE994523F8D2C100F19152 /* RxRelay.framework */; };
+		CAFE994723F8D2C100F19152 /* RxRelay.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CAFE994523F8D2C100F19152 /* RxRelay.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,7 @@
 			files = (
 				CAFE990223F795A400F19152 /* RxSwift.framework in Embed Frameworks */,
 				CAFE990023F795A400F19152 /* RxCocoa.framework in Embed Frameworks */,
+				CAFE994723F8D2C100F19152 /* RxRelay.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -57,8 +60,6 @@
 		CAFE98C923F78DC400F19152 /* Reiwashi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Reiwashi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAFE98CC23F78DC400F19152 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CAFE98CE23F78DC400F19152 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CAFE98D023F78DC400F19152 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		CAFE98D323F78DC400F19152 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CAFE98D523F78DC700F19152 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CAFE98D823F78DC700F19152 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CAFE98DA23F78DC700F19152 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -70,6 +71,9 @@
 		CAFE98F023F78DC700F19152 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CAFE98FD23F795A400F19152 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
 		CAFE98FE23F795A400F19152 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
+		CAFE994123F8CE8900F19152 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
+		CAFE994223F8CE8900F19152 /* HistoryViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryViewController.xib; sourceTree = "<group>"; };
+		CAFE994523F8D2C100F19152 /* RxRelay.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxRelay.framework; path = Carthage/Build/iOS/RxRelay.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +83,7 @@
 			files = (
 				CAFE990123F795A400F19152 /* RxSwift.framework in Frameworks */,
 				CAFE98FF23F795A400F19152 /* RxCocoa.framework in Frameworks */,
+				CAFE994623F8D2C100F19152 /* RxRelay.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -125,8 +130,8 @@
 			children = (
 				CAFE98CC23F78DC400F19152 /* AppDelegate.swift */,
 				CAFE98CE23F78DC400F19152 /* SceneDelegate.swift */,
-				CAFE98D023F78DC400F19152 /* ViewController.swift */,
-				CAFE98D223F78DC400F19152 /* Main.storyboard */,
+				CAFE994123F8CE8900F19152 /* HistoryViewController.swift */,
+				CAFE994223F8CE8900F19152 /* HistoryViewController.xib */,
 				CAFE98D523F78DC700F19152 /* Assets.xcassets */,
 				CAFE98D723F78DC700F19152 /* LaunchScreen.storyboard */,
 				CAFE98DA23F78DC700F19152 /* Info.plist */,
@@ -155,6 +160,7 @@
 		CAFE98FC23F795A400F19152 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CAFE994523F8D2C100F19152 /* RxRelay.framework */,
 				CAFE98FD23F795A400F19152 /* RxCocoa.framework */,
 				CAFE98FE23F795A400F19152 /* RxSwift.framework */,
 			);
@@ -269,7 +275,7 @@
 			files = (
 				CAFE98D923F78DC700F19152 /* LaunchScreen.storyboard in Resources */,
 				CAFE98D623F78DC700F19152 /* Assets.xcassets in Resources */,
-				CAFE98D423F78DC400F19152 /* Main.storyboard in Resources */,
+				CAFE994423F8CE8900F19152 /* HistoryViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,6 +306,7 @@
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxRelay.framework",
 			);
 			outputFileListPaths = (
 			);
@@ -316,9 +323,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CAFE98D123F78DC400F19152 /* ViewController.swift in Sources */,
 				CAFE98CD23F78DC400F19152 /* AppDelegate.swift in Sources */,
 				CAFE98CF23F78DC400F19152 /* SceneDelegate.swift in Sources */,
+				CAFE994323F8CE8900F19152 /* HistoryViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -354,14 +361,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		CAFE98D223F78DC400F19152 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CAFE98D323F78DC400F19152 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		CAFE98D723F78DC700F19152 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
