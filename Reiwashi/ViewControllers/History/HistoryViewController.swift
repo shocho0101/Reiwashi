@@ -12,7 +12,7 @@ import RxSwift
 
 class HistoryViewController: UIViewController {
     
-    @IBOutlet var addButton: UIButton!
+    @IBOutlet var addBarButtonItem: UIBarButtonItem!
     
     private let disposeBag = DisposeBag()
     
@@ -29,13 +29,17 @@ class HistoryViewController: UIViewController {
         super.viewDidLoad()
         
         title = "令和史"
-        
+        setUp()
         bind()
     }
     
+    func setUp() {
+        addBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action:nil)
+        self.navigationItem.rightBarButtonItems = [addBarButtonItem]
+    }
+    
     func bind() {
-        
-        addButton.rx.tap.subscribe(onNext: { [weak self] _ in
+        addBarButtonItem.rx.tap.subscribe(onNext: { [weak self] _ in
             self?.navigationController?.pushViewController(AddHistoryViewController(), animated: true)
         })
         .disposed(by: disposeBag)
