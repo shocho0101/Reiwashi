@@ -14,6 +14,15 @@
 		CA71FBD123F928FD00E9DE66 /* Action.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA71FBD023F928FD00E9DE66 /* Action.framework */; };
 		CA71FBD223F928FD00E9DE66 /* Action.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CA71FBD023F928FD00E9DE66 /* Action.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CA71FBD423F978D900E9DE66 /* UIAlertController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA71FBD323F978D900E9DE66 /* UIAlertController+Extensions.swift */; };
+		CAD4E94923FBFD890069B475 /* AddWordDataGatewayActionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD4E94823FBFD890069B475 /* AddWordDataGatewayActionTests.swift */; };
+		CAD4E94E23FBFECA0069B475 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAFE98FD23F795A400F19152 /* RxCocoa.framework */; };
+		CAD4E94F23FBFECA0069B475 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAFE98FE23F795A400F19152 /* RxSwift.framework */; };
+		CAD4E95323FBFECA0069B475 /* RxTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAD4E95023FBFECA0069B475 /* RxTest.framework */; };
+		CAD4E95523FBFECA0069B475 /* RxBlocking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAD4E95223FBFECA0069B475 /* RxBlocking.framework */; };
+		CADB139723FBF0B5002B453A /* RxAlamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CADB139623FBF0B5002B453A /* RxAlamofire.framework */; };
+		CADB139823FBF0B5002B453A /* RxAlamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CADB139623FBF0B5002B453A /* RxAlamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CADB139A23FBF156002B453A /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CADB139923FBF156002B453A /* Alamofire.framework */; };
+		CADB139B23FBF156002B453A /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CADB139923FBF156002B453A /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CAFE98CD23F78DC400F19152 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFE98CC23F78DC400F19152 /* AppDelegate.swift */; };
 		CAFE98CF23F78DC400F19152 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFE98CE23F78DC400F19152 /* SceneDelegate.swift */; };
 		CAFE98D623F78DC700F19152 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CAFE98D523F78DC700F19152 /* Assets.xcassets */; };
@@ -58,6 +67,8 @@
 			dstSubfolderSpec = 10;
 			files = (
 				CAFE990223F795A400F19152 /* RxSwift.framework in Embed Frameworks */,
+				CADB139B23FBF156002B453A /* Alamofire.framework in Embed Frameworks */,
+				CADB139823FBF0B5002B453A /* RxAlamofire.framework in Embed Frameworks */,
 				CAFE990023F795A400F19152 /* RxCocoa.framework in Embed Frameworks */,
 				CA71FBD223F928FD00E9DE66 /* Action.framework in Embed Frameworks */,
 				CAFE994723F8D2C100F19152 /* RxRelay.framework in Embed Frameworks */,
@@ -74,6 +85,12 @@
 		CA471A6423F97FAD000D438D /* SVProgressHUD+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SVProgressHUD+Extensions.swift"; sourceTree = "<group>"; };
 		CA71FBD023F928FD00E9DE66 /* Action.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Action.framework; path = Carthage/Build/iOS/Action.framework; sourceTree = "<group>"; };
 		CA71FBD323F978D900E9DE66 /* UIAlertController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertController+Extensions.swift"; sourceTree = "<group>"; };
+		CAD4E94823FBFD890069B475 /* AddWordDataGatewayActionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWordDataGatewayActionTests.swift; sourceTree = "<group>"; };
+		CAD4E95023FBFECA0069B475 /* RxTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxTest.framework; path = Carthage/Build/iOS/RxTest.framework; sourceTree = "<group>"; };
+		CAD4E95123FBFECA0069B475 /* SVProgressHUD.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SVProgressHUD.framework; path = Carthage/Build/iOS/SVProgressHUD.framework; sourceTree = "<group>"; };
+		CAD4E95223FBFECA0069B475 /* RxBlocking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxBlocking.framework; path = Carthage/Build/iOS/RxBlocking.framework; sourceTree = "<group>"; };
+		CADB139623FBF0B5002B453A /* RxAlamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxAlamofire.framework; path = Carthage/Build/iOS/RxAlamofire.framework; sourceTree = "<group>"; };
+		CADB139923FBF156002B453A /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		CAFE98C923F78DC400F19152 /* Reiwashi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Reiwashi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAFE98CC23F78DC400F19152 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CAFE98CE23F78DC400F19152 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -102,6 +119,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				CAFE990123F795A400F19152 /* RxSwift.framework in Frameworks */,
+				CADB139A23FBF156002B453A /* Alamofire.framework in Frameworks */,
+				CADB139723FBF0B5002B453A /* RxAlamofire.framework in Frameworks */,
 				CAFE98FF23F795A400F19152 /* RxCocoa.framework in Frameworks */,
 				CA71FBD123F928FD00E9DE66 /* Action.framework in Frameworks */,
 				CAFE994623F8D2C100F19152 /* RxRelay.framework in Frameworks */,
@@ -112,6 +131,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CAD4E95323FBFECA0069B475 /* RxTest.framework in Frameworks */,
+				CAD4E95523FBFECA0069B475 /* RxBlocking.framework in Frameworks */,
+				CAD4E94E23FBFECA0069B475 /* RxCocoa.framework in Frameworks */,
+				CAD4E94F23FBFECA0069B475 /* RxSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -129,18 +152,18 @@
 			isa = PBXGroup;
 			children = (
 				CA06A3D823F9137D00999BAD /* DataGateway.swift */,
-				CA06A3DC23F9150C00999BAD /* DataGatewayRequest */,
+				CA06A3DC23F9150C00999BAD /* DataGatewayAction */,
 			);
 			path = DataGateway;
 			sourceTree = "<group>";
 		};
-		CA06A3DC23F9150C00999BAD /* DataGatewayRequest */ = {
+		CA06A3DC23F9150C00999BAD /* DataGatewayAction */ = {
 			isa = PBXGroup;
 			children = (
 				CA06A3DA23F9140500999BAD /* DataGatewayAction.swift */,
 				CA06A3DD23F9153200999BAD /* AddWordDataGatewayAction.swift */,
 			);
-			path = DataGatewayRequest;
+			path = DataGatewayAction;
 			sourceTree = "<group>";
 		};
 		CA471A6623F981B2000D438D /* ViewControllers */ = {
@@ -201,6 +224,7 @@
 			isa = PBXGroup;
 			children = (
 				CAFE98E323F78DC700F19152 /* ReiwashiTests.swift */,
+				CAD4E94823FBFD890069B475 /* AddWordDataGatewayActionTests.swift */,
 				CAFE98E523F78DC700F19152 /* Info.plist */,
 			);
 			path = ReiwashiTests;
@@ -218,6 +242,11 @@
 		CAFE98FC23F795A400F19152 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CAD4E95223FBFECA0069B475 /* RxBlocking.framework */,
+				CAD4E95023FBFECA0069B475 /* RxTest.framework */,
+				CAD4E95123FBFECA0069B475 /* SVProgressHUD.framework */,
+				CADB139923FBF156002B453A /* Alamofire.framework */,
+				CADB139623FBF0B5002B453A /* RxAlamofire.framework */,
 				CA71FBD023F928FD00E9DE66 /* Action.framework */,
 				CAFE994523F8D2C100F19152 /* RxRelay.framework */,
 				CAFE98FD23F795A400F19152 /* RxCocoa.framework */,
@@ -274,6 +303,7 @@
 				CAFE98DB23F78DC700F19152 /* Sources */,
 				CAFE98DC23F78DC700F19152 /* Frameworks */,
 				CAFE98DD23F78DC700F19152 /* Resources */,
+				CAD4E95623FBFFBE0069B475 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -375,6 +405,27 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		CAD4E95623FBFFBE0069B475 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 12;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/RxTest.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxBlocking.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n/usr/local/bin/carthage copy-frameworks\n";
+		};
 		CAFE990423F795C700F19152 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -388,6 +439,8 @@
 				"$(SRCROOT)/Carthage/Build/iOS/RxRelay.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Action.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/SVProgressHUD.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxAlamofire.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
 			);
 			outputFileListPaths = (
 			);
@@ -421,6 +474,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CAD4E94923FBFD890069B475 /* AddWordDataGatewayActionTests.swift in Sources */,
 				CAFE98E423F78DC700F19152 /* ReiwashiTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -625,6 +679,10 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BV8VP6YGE9;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = ReiwashiTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -647,6 +705,10 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BV8VP6YGE9;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = ReiwashiTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (

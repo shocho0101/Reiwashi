@@ -1,3 +1,4 @@
-github "ReactiveX/RxSwift" ~> 5.0
+github "ReactiveX/RxSwift"
 github "RxSwiftCommunity/Action" 
 github "SVProgressHUD/SVProgressHUD"
+github "RxSwiftCommunity/RxAlamofire"
