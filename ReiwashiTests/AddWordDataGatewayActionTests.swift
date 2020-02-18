@@ -17,7 +17,7 @@ class AddWordDataGatewayActionTests: XCTestCase {
     func testApi() {
         let exp = expectation(description: "api")
         
-        let action = AddWordDataGatewayAction().api()
+        let action = AddWordDataGatewayAction.api()
         
         action.execute("unit test")
             .subscribe(onNext: {

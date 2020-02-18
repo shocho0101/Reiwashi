@@ -11,11 +11,11 @@ import RxCocoa
 import RxSwift
 import Action
 
-class DataGateway {
+enum DataGateway {
     
     static var workType: WorkType = .mock
     
-    static func getAction<T: DataGatewayAction>(_ request: T) -> Action<T.Input, T.Response> {
+    static func getAction<T: DataGatewayAction>(_ request: T.Type) -> Action<T.Input, T.Response> {
         switch workType {
         case .api:
             return request.api()

@@ -15,6 +15,6 @@ protocol DataGatewayAction {
     associatedtype Input
     associatedtype Response
     
-    func api() -> Action<Input, Response>
-    func mock() -> Action<Input, Response>
+    static func api() -> Action<Input, Response>
+    static func mock() -> Action<Input, Response>
 }

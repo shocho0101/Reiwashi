@@ -13,8 +13,8 @@ import Action
 import RxAlamofire
 import Alamofire
 
-struct AddWordDataGatewayAction: DataGatewayAction {
-    func api() -> Action<String, Void> {
+enum AddWordDataGatewayAction: DataGatewayAction {
+    static func api() -> Action<String, Void> {
         return .init { word -> Observable<Void> in
             return RxAlamofire.request(
                 .post,
@@ -27,7 +27,7 @@ struct AddWordDataGatewayAction: DataGatewayAction {
         }
     }
     
-    func mock() -> Action<String, Void> {
+    static func mock() -> Action<String, Void> {
         return .init { word -> Observable<Void> in
             return Observable.just(()).delay(.seconds(1), scheduler: MainScheduler.instance)
         }
