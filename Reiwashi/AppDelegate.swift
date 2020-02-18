@@ -17,8 +17,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         window = UIWindow(frame: UIScreen.main.bounds)
-        let navigationController =  UINavigationController(rootViewController: HistoryViewController())
-        window?.rootViewController = navigationController
+        let modalTabBarController = ModalTabBarController()
+        let navigationController = UINavigationController(rootViewController: HistoryViewController())
+        let viewControllers = [navigationController, AddHistoryViewController()]
+        modalTabBarController.setViewControllers(viewControllers, animated: true)
+        modalTabBarController.selectedIndex = 0
+        window?.rootViewController = modalTabBarController
         window?.makeKeyAndVisible()
         return true
     }

@@ -20,7 +20,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         let window = UIWindow(windowScene: windowScene)
         self.window = window
-        window.rootViewController = UINavigationController(rootViewController: HistoryViewController())
+        let modalTabBarController = ModalTabBarController()
+        let navigationController = UINavigationController(rootViewController: HistoryViewController())
+        let viewControllers = [navigationController, AddHistoryViewController()]
+        modalTabBarController.setViewControllers(viewControllers, animated: true)
+        modalTabBarController.selectedIndex = 0
+//        window.rootViewController = UINavigationController(rootViewController: HistoryViewController())
+        window.rootViewController = modalTabBarController
         window.makeKeyAndVisible()
     }
 
