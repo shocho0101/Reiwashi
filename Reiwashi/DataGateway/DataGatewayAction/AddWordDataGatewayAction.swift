@@ -14,22 +14,48 @@ import RxAlamofire
 import Alamofire
 
 enum AddWordDataGatewayAction: DataGatewayAction {
-    static func api() -> Action<String, Void> {
-        return .init { word -> Observable<Void> in
-            return RxAlamofire.request(
-                .post,
-                "https://neo-tokyo.work:10282/words",
-                parameters: ["name": word, "user_id": "1", "tag_id": "1"],
-                encoding: JSONEncoding.default,
-                headers: ["Content-Type":"application/json", "Authorization": "Token AVuaN6VRD9nnEaHPLJQ8LA7A"]
-            )
-            .map{ _ in () }
+    struct Input: Codable {
+        let name: String
+    }
+    
+    private struct Response: Codable {
+        let status: Status
+        
+        enum Status: String, Codable {
+            case success
+            case already
+            case error
         }
     }
     
-    static func mock() -> Action<String, Void> {
-        return .init { word -> Observable<Void> in
-            return Observable.just(()).delay(.seconds(1), scheduler: MainScheduler.instance)
+    enum Output {
+        case already
+        case success
+    }
+    
+    static func api() -> Action<Input, Output> {
+        return Action.init { input -> Observable<Output> in
+            return APIClient.request(.post, path: "words", body: input, needAuth: true, responseType: Response.self)
+                .map { responce in
+                    switch responce.status {
+                    case .success:
+                        return .success
+                    case .already:
+                        return .already
+                    case .error:
+                        throw APIError.error
+                    }
+                }
         }
+    }
+    
+    static func mock() -> Action<Input, Output> {
+        return .init { _ -> Observable<Output> in
+            return Observable.just(.success).delay(.seconds(1), scheduler: MainScheduler.instance)
+        }
+    }
+    
+    enum APIError: Error {
+        case error
     }
 }

@@ -17,10 +17,11 @@ class AddWordDataGatewayActionTests: XCTestCase {
     func testApi() {
         let exp = expectation(description: "api")
         
+        let input = AddWordDataGatewayAction.Input(name: "test")
         let action = AddWordDataGatewayAction.api()
         
-        action.execute("unit test")
-            .subscribe(onNext: {
+        action.execute(input)
+            .subscribe(onNext: { _ in
                 exp.fulfill()
             })
             .disposed(by: disposeBag)

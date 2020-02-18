@@ -13,8 +13,8 @@ import Action
 
 protocol DataGatewayAction {
     associatedtype Input
-    associatedtype Response
+    associatedtype Output
     
-    static func api() -> Action<Input, Response>
-    static func mock() -> Action<Input, Response>
+    static func api() -> Action<Input, Output>
+    static func mock() -> Action<Input, Output>
 }

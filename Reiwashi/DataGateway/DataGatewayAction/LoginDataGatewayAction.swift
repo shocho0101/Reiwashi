@@ -10,31 +10,28 @@ import RxSwift
 import RxCocoa
 import Action
 import RxAlamofire
+import KeychainAccess
 import Alamofire
 
 enum LoginDataGatewayAction: DataGatewayAction {
     
-    struct Input {
+    struct Input: Encodable {
         let email: String
         let password: String
-        
-        var dictionary: [String: String] {
-            return [
-                "email": email,
-                "password": password
-            ]
-        }
+    }
+    
+    private struct Response: Codable {
+        let status: String
+        let token: String
     }
     
     static func api() -> Action<Input, Void> {
         return .init { input -> Observable<Void> in
-            return RxAlamofire.request(
-                .post,
-                "https://neo-tokyo.work:10282/users/sign_in",
-                parameters: input.dictionary,
-                encoding: JSONEncoding.default,
-                headers: ["Content-Type": "application/json"]
-            ).map { _ in () }
+            return APIClient.request(.post, path: "users/sign_in", body: input, needAuth: false, responseType: Response.self)
+                .do(onNext: { response in
+                    let keychain = Keychain(service: "jp.2222_d.reiwashi")
+                    keychain["api_token"] = response.token
+                }).map { _ in () }
         }
     }
     

@@ -26,6 +26,7 @@ extension AddHistoryViewController {
                 .filter { !$0 }
                 .withLatestFrom(word)
                 .filter { !$0.isEmpty }
+                .map { AddWordDataGatewayAction.Input(name: $0) }
                 .bind(to: action.inputs)
                 .disposed(by: disposeBag)
         }
@@ -38,6 +39,7 @@ extension AddHistoryViewController {
         
         var popViewController: Driver<Void> {
             return action.elements
+                .map { _ in () }
                 .asDriver(onErrorDriveWith: .empty())
         }
         

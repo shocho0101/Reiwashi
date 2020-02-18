@@ -20,6 +20,12 @@
 		CAD4E95323FBFECA0069B475 /* RxTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAD4E95023FBFECA0069B475 /* RxTest.framework */; };
 		CAD4E95523FBFECA0069B475 /* RxBlocking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAD4E95223FBFECA0069B475 /* RxBlocking.framework */; };
 		CAD4E95823FC01F80069B475 /* LoginDataGatewayAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD4E95723FC01F80069B475 /* LoginDataGatewayAction.swift */; };
+		CADAB2CF23FC0C6E00B3BC3A /* KeychainAccess.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CADAB2CE23FC0C6E00B3BC3A /* KeychainAccess.framework */; };
+		CADAB2D023FC0C6E00B3BC3A /* KeychainAccess.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CADAB2CE23FC0C6E00B3BC3A /* KeychainAccess.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CADAB2D223FC294C00B3BC3A /* LoginDatagatewayActionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CADAB2D123FC294C00B3BC3A /* LoginDatagatewayActionTests.swift */; };
+		CADAB2D423FC2A8300B3BC3A /* SignUpDatagatewayAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = CADAB2D323FC2A8300B3BC3A /* SignUpDatagatewayAction.swift */; };
+		CADAB2D723FC2B8600B3BC3A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CADAB2D623FC2B8600B3BC3A /* User.swift */; };
+		CADAB2DB23FC40E900B3BC3A /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = CADAB2DA23FC40E900B3BC3A /* APIClient.swift */; };
 		CADB139723FBF0B5002B453A /* RxAlamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CADB139623FBF0B5002B453A /* RxAlamofire.framework */; };
 		CADB139823FBF0B5002B453A /* RxAlamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CADB139623FBF0B5002B453A /* RxAlamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CADB139A23FBF156002B453A /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CADB139923FBF156002B453A /* Alamofire.framework */; };
@@ -70,6 +76,7 @@
 				CAFE990223F795A400F19152 /* RxSwift.framework in Embed Frameworks */,
 				CADB139B23FBF156002B453A /* Alamofire.framework in Embed Frameworks */,
 				CADB139823FBF0B5002B453A /* RxAlamofire.framework in Embed Frameworks */,
+				CADAB2D023FC0C6E00B3BC3A /* KeychainAccess.framework in Embed Frameworks */,
 				CAFE990023F795A400F19152 /* RxCocoa.framework in Embed Frameworks */,
 				CA71FBD223F928FD00E9DE66 /* Action.framework in Embed Frameworks */,
 				CAFE994723F8D2C100F19152 /* RxRelay.framework in Embed Frameworks */,
@@ -91,6 +98,11 @@
 		CAD4E95123FBFECA0069B475 /* SVProgressHUD.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SVProgressHUD.framework; path = Carthage/Build/iOS/SVProgressHUD.framework; sourceTree = "<group>"; };
 		CAD4E95223FBFECA0069B475 /* RxBlocking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxBlocking.framework; path = Carthage/Build/iOS/RxBlocking.framework; sourceTree = "<group>"; };
 		CAD4E95723FC01F80069B475 /* LoginDataGatewayAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginDataGatewayAction.swift; sourceTree = "<group>"; };
+		CADAB2CE23FC0C6E00B3BC3A /* KeychainAccess.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KeychainAccess.framework; path = Carthage/Build/iOS/KeychainAccess.framework; sourceTree = "<group>"; };
+		CADAB2D123FC294C00B3BC3A /* LoginDatagatewayActionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginDatagatewayActionTests.swift; sourceTree = "<group>"; };
+		CADAB2D323FC2A8300B3BC3A /* SignUpDatagatewayAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpDatagatewayAction.swift; sourceTree = "<group>"; };
+		CADAB2D623FC2B8600B3BC3A /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		CADAB2DA23FC40E900B3BC3A /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		CADB139623FBF0B5002B453A /* RxAlamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxAlamofire.framework; path = Carthage/Build/iOS/RxAlamofire.framework; sourceTree = "<group>"; };
 		CADB139923FBF156002B453A /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		CAFE98C923F78DC400F19152 /* Reiwashi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Reiwashi.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -123,6 +135,7 @@
 				CAFE990123F795A400F19152 /* RxSwift.framework in Frameworks */,
 				CADB139A23FBF156002B453A /* Alamofire.framework in Frameworks */,
 				CADB139723FBF0B5002B453A /* RxAlamofire.framework in Frameworks */,
+				CADAB2CF23FC0C6E00B3BC3A /* KeychainAccess.framework in Frameworks */,
 				CAFE98FF23F795A400F19152 /* RxCocoa.framework in Frameworks */,
 				CA71FBD123F928FD00E9DE66 /* Action.framework in Frameworks */,
 				CAFE994623F8D2C100F19152 /* RxRelay.framework in Frameworks */,
@@ -165,6 +178,7 @@
 				CA06A3DA23F9140500999BAD /* DataGatewayAction.swift */,
 				CA06A3DD23F9153200999BAD /* AddWordDataGatewayAction.swift */,
 				CAD4E95723FC01F80069B475 /* LoginDataGatewayAction.swift */,
+				CADAB2D323FC2A8300B3BC3A /* SignUpDatagatewayAction.swift */,
 			);
 			path = DataGatewayAction;
 			sourceTree = "<group>";
@@ -185,6 +199,14 @@
 				CA471A6423F97FAD000D438D /* SVProgressHUD+Extensions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		CADAB2D523FC2B7D00B3BC3A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CADAB2D623FC2B8600B3BC3A /* User.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		CAFE98C023F78DC300F19152 = {
@@ -211,6 +233,7 @@
 		CAFE98CB23F78DC400F19152 /* Reiwashi */ = {
 			isa = PBXGroup;
 			children = (
+				CADAB2D523FC2B7D00B3BC3A /* Model */,
 				CA06A3D723F9135F00999BAD /* DataGateway */,
 				CA471A6623F981B2000D438D /* ViewControllers */,
 				CA71FBD523F9799400E9DE66 /* Extensions */,
@@ -219,6 +242,7 @@
 				CAFE98D523F78DC700F19152 /* Assets.xcassets */,
 				CAFE98D723F78DC700F19152 /* LaunchScreen.storyboard */,
 				CAFE98DA23F78DC700F19152 /* Info.plist */,
+				CADAB2DA23FC40E900B3BC3A /* APIClient.swift */,
 			);
 			path = Reiwashi;
 			sourceTree = "<group>";
@@ -228,6 +252,7 @@
 			children = (
 				CAFE98E323F78DC700F19152 /* ReiwashiTests.swift */,
 				CAD4E94823FBFD890069B475 /* AddWordDataGatewayActionTests.swift */,
+				CADAB2D123FC294C00B3BC3A /* LoginDatagatewayActionTests.swift */,
 				CAFE98E523F78DC700F19152 /* Info.plist */,
 			);
 			path = ReiwashiTests;
@@ -245,6 +270,7 @@
 		CAFE98FC23F795A400F19152 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CADAB2CE23FC0C6E00B3BC3A /* KeychainAccess.framework */,
 				CAD4E95223FBFECA0069B475 /* RxBlocking.framework */,
 				CAD4E95023FBFECA0069B475 /* RxTest.framework */,
 				CAD4E95123FBFECA0069B475 /* SVProgressHUD.framework */,
@@ -444,6 +470,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/SVProgressHUD.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RxAlamofire.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/KeychainAccess.framework",
 			);
 			outputFileListPaths = (
 			);
@@ -460,6 +487,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CADAB2D723FC2B8600B3BC3A /* User.swift in Sources */,
+				CADAB2DB23FC40E900B3BC3A /* APIClient.swift in Sources */,
+				CADAB2D423FC2A8300B3BC3A /* SignUpDatagatewayAction.swift in Sources */,
 				CA06A3D923F9137D00999BAD /* DataGateway.swift in Sources */,
 				CA471A6523F97FAD000D438D /* SVProgressHUD+Extensions.swift in Sources */,
 				CA71FBD423F978D900E9DE66 /* UIAlertController+Extensions.swift in Sources */,
@@ -479,6 +509,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CAD4E94923FBFD890069B475 /* AddWordDataGatewayActionTests.swift in Sources */,
+				CADAB2D223FC294C00B3BC3A /* LoginDatagatewayActionTests.swift in Sources */,
 				CAFE98E423F78DC700F19152 /* ReiwashiTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

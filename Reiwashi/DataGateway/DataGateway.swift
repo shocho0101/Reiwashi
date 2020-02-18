@@ -15,7 +15,7 @@ enum DataGateway {
     
     static var workType: WorkType = .mock
     
-    static func getAction<T: DataGatewayAction>(_ request: T.Type) -> Action<T.Input, T.Response> {
+    static func getAction<T: DataGatewayAction>(_ request: T.Type) -> Action<T.Input, T.Output> {
         switch workType {
         case .api:
             return request.api()
