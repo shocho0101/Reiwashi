@@ -19,6 +19,7 @@
 		CAD4E94F23FBFECA0069B475 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAFE98FE23F795A400F19152 /* RxSwift.framework */; };
 		CAD4E95323FBFECA0069B475 /* RxTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAD4E95023FBFECA0069B475 /* RxTest.framework */; };
 		CAD4E95523FBFECA0069B475 /* RxBlocking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAD4E95223FBFECA0069B475 /* RxBlocking.framework */; };
+		CAD4E95823FC01F80069B475 /* LoginDataGatewayAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD4E95723FC01F80069B475 /* LoginDataGatewayAction.swift */; };
 		CADB139723FBF0B5002B453A /* RxAlamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CADB139623FBF0B5002B453A /* RxAlamofire.framework */; };
 		CADB139823FBF0B5002B453A /* RxAlamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CADB139623FBF0B5002B453A /* RxAlamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CADB139A23FBF156002B453A /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CADB139923FBF156002B453A /* Alamofire.framework */; };
@@ -89,6 +90,7 @@
 		CAD4E95023FBFECA0069B475 /* RxTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxTest.framework; path = Carthage/Build/iOS/RxTest.framework; sourceTree = "<group>"; };
 		CAD4E95123FBFECA0069B475 /* SVProgressHUD.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SVProgressHUD.framework; path = Carthage/Build/iOS/SVProgressHUD.framework; sourceTree = "<group>"; };
 		CAD4E95223FBFECA0069B475 /* RxBlocking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxBlocking.framework; path = Carthage/Build/iOS/RxBlocking.framework; sourceTree = "<group>"; };
+		CAD4E95723FC01F80069B475 /* LoginDataGatewayAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginDataGatewayAction.swift; sourceTree = "<group>"; };
 		CADB139623FBF0B5002B453A /* RxAlamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxAlamofire.framework; path = Carthage/Build/iOS/RxAlamofire.framework; sourceTree = "<group>"; };
 		CADB139923FBF156002B453A /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		CAFE98C923F78DC400F19152 /* Reiwashi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Reiwashi.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -162,6 +164,7 @@
 			children = (
 				CA06A3DA23F9140500999BAD /* DataGatewayAction.swift */,
 				CA06A3DD23F9153200999BAD /* AddWordDataGatewayAction.swift */,
+				CAD4E95723FC01F80069B475 /* LoginDataGatewayAction.swift */,
 			);
 			path = DataGatewayAction;
 			sourceTree = "<group>";
@@ -463,6 +466,7 @@
 				CAFE98CD23F78DC400F19152 /* AppDelegate.swift in Sources */,
 				CA06A3DB23F9140500999BAD /* DataGatewayAction.swift in Sources */,
 				CAFE995323F90A3200F19152 /* AddHistoryViewModel.swift in Sources */,
+				CAD4E95823FC01F80069B475 /* LoginDataGatewayAction.swift in Sources */,
 				CA06A3DE23F9153200999BAD /* AddWordDataGatewayAction.swift in Sources */,
 				CAFE98CF23F78DC400F19152 /* SceneDelegate.swift in Sources */,
 				CAFE994323F8CE8900F19152 /* HistoryViewController.swift in Sources */,
