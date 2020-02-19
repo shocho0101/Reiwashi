@@ -7,10 +7,22 @@
 //
 
 import UIKit
+import RxCocoa
+import RxSwift
+import SVProgressHUD
 
 class LoginViewController: UIViewController {
     
+    @IBOutlet var emailTextField: UITextField!
+    @IBOutlet var passwordTextField: UITextField!
+    @IBOutlet var loginButton: UIButton!
+    
+    private let viewModel: ViewModel
+    
+    private let disposeBag = DisposeBag()
+    
     init() {
+        self.viewModel = ViewModel()
         super.init(nibName: nil, bundle: Bundle(for: type(of: self)))
     }
     
@@ -18,22 +30,49 @@ class LoginViewController: UIViewController {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        bind()
     }
-
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    private func bind() {
+        // ViewController -> ViewModel
+        emailTextField.rx.text
+            .orEmpty
+            .bind(to: viewModel.email)
+            .disposed(by: disposeBag)
+        
+        passwordTextField.rx.text
+            .orEmpty
+            .bind(to: viewModel.password)
+            .disposed(by: disposeBag)
+        
+        loginButton.rx.tap
+            .bind(to: viewModel.loginButtonTapped)
+            .disposed(by: disposeBag)
+        
+        // ViewModel -> ViewController
+        viewModel.showErrorAlert
+            .drive(onNext: { [weak self] in
+                let alert = UIAlertController.simpleAlert(title: "エラー", message: "ログインできませんでした")
+                self?.present(alert, animated: true, completion: nil)
+            }).disposed(by: disposeBag)
+        
+        viewModel.dismissViewController
+            .drive(onNext: {
+                // TODO: トップページに遷移する。
+                print("ログイン完了")
+            }).disposed(by: disposeBag)
+        
+        viewModel.isButtonEnabled
+            .drive(loginButton.rx.isEnabled)
+            .disposed(by: disposeBag)
+        
+        viewModel.showHud
+            .drive(SVProgressHUD.rx.isAnimating)
+            .disposed(by: disposeBag)
     }
-    */
-
+    
 }

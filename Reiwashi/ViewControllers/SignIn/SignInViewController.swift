@@ -10,6 +10,13 @@ import UIKit
 
 class SignInViewController: UIViewController {
     
+    @IBOutlet var nameTextField: UITextField!
+    @IBOutlet var emailTextField: UITextField!
+    @IBOutlet var sexTextField: UITextField!
+    @IBOutlet var birthdayTextField: UITextField!
+    @IBOutlet var placeTextField: UITextField!
+    @IBOutlet var passwordTextField: UITextField!
+    
     init() {
         super.init(nibName: nil, bundle: Bundle(for: type(of: self)))
     }
@@ -22,7 +29,7 @@ class SignInViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        
     }
 
 

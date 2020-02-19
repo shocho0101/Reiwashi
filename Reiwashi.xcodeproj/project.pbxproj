@@ -42,6 +42,7 @@
 		CADAB30E23FD41D100B3BC3A /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CADAB30C23FD41D100B3BC3A /* LoginViewController.xib */; };
 		CADAB31323FD421B00B3BC3A /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CADAB31123FD421B00B3BC3A /* SignInViewController.swift */; };
 		CADAB31423FD421B00B3BC3A /* SignInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CADAB31223FD421B00B3BC3A /* SignInViewController.xib */; };
+		CADAB31623FD42A500B3BC3A /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CADAB31523FD42A500B3BC3A /* LoginViewModel.swift */; };
 		CADB139723FBF0B5002B453A /* RxAlamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CADB139623FBF0B5002B453A /* RxAlamofire.framework */; };
 		CADB139823FBF0B5002B453A /* RxAlamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CADB139623FBF0B5002B453A /* RxAlamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CADB139A23FBF156002B453A /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CADB139923FBF156002B453A /* Alamofire.framework */; };
@@ -135,6 +136,7 @@
 		CADAB30C23FD41D100B3BC3A /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		CADAB31123FD421B00B3BC3A /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		CADAB31223FD421B00B3BC3A /* SignInViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignInViewController.xib; sourceTree = "<group>"; };
+		CADAB31523FD42A500B3BC3A /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		CADB139623FBF0B5002B453A /* RxAlamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxAlamofire.framework; path = Carthage/Build/iOS/RxAlamofire.framework; sourceTree = "<group>"; };
 		CADB139923FBF156002B453A /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		CAFE98C923F78DC400F19152 /* Reiwashi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Reiwashi.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -257,6 +259,7 @@
 			isa = PBXGroup;
 			children = (
 				CADAB30B23FD41D100B3BC3A /* LoginViewController.swift */,
+				CADAB31523FD42A500B3BC3A /* LoginViewModel.swift */,
 				CADAB30C23FD41D100B3BC3A /* LoginViewController.xib */,
 			);
 			path = Login;
@@ -583,6 +586,7 @@
 				CA06A3DB23F9140500999BAD /* DataGatewayAction.swift in Sources */,
 				CAFE995323F90A3200F19152 /* AddHistoryViewModel.swift in Sources */,
 				CAD4E95823FC01F80069B475 /* LoginDataGatewayAction.swift in Sources */,
+				CADAB31623FD42A500B3BC3A /* LoginViewModel.swift in Sources */,
 				CADAB2F623FD3A2200B3BC3A /* WelcomeViewController.swift in Sources */,
 				CA06A3DE23F9153200999BAD /* AddWordDataGatewayAction.swift in Sources */,
 				CADAB2E923FD1C9B00B3BC3A /* AddFabDatagatewayAction.swift in Sources */,

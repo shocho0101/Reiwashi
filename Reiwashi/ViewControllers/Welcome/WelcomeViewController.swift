@@ -15,7 +15,7 @@ class WelcomeViewController: UIViewController {
     @IBOutlet var loginButton: UIButton!
     @IBOutlet var signInButton: UIButton!
     
-    let disposableBag = DisposeBag()
+    let disposeBag = DisposeBag()
     
     init() {
         super.init(nibName: nil, bundle: Bundle(for: type(of: self)))
@@ -31,11 +31,11 @@ class WelcomeViewController: UIViewController {
         
         loginButton.rx.tap.asDriver().drive(onNext: { [navigationController] _ in
             navigationController?.pushViewController(LoginViewController(), animated: true)
-        }).disposed(by: disposableBag)
+        }).disposed(by: disposeBag)
         
         signInButton.rx.tap.asDriver().drive(onNext: { [navigationController] _ in
             navigationController?.pushViewController(SignInViewController(), animated: true)
-        }).disposed(by: disposableBag)
+        }).disposed(by: disposeBag)
     }
     
 }
