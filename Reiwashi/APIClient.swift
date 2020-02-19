@@ -17,23 +17,30 @@ enum APIClient {
     // TODO: リファクタリングしたい
     static func request<Body: Encodable, Response: Decodable>(_ method: HTTPMethod, path: String, body: Body? = nil, needAuth: Bool, responseType: Response.Type) -> Observable<Response> {
         guard let url = URL(string: baseUrl + path) else {
-            return Observable<Response>.error(RequestError.invalidPath)
+            return Observable<Response>.error(ReiwashiError.invalidPath)
         }
         
         var request = URLRequest(url: url)
         request.httpMethod = method.rawValue
         
         if needAuth {
-            request.setValue("Token AVuaN6VRD9nnEaHPLJQ8LA7A", forHTTPHeaderField: "Authorization")
+            guard let token = Auth.token else {
+                return Observable<Response>.error(ReiwashiError.notLoggedIn)
+            }
+            request.setValue("Token " + token, forHTTPHeaderField: "Authorization")
         }
         
         if let body = body {
-            request.setValue("application/json", forHTTPHeaderField: "Content-Type")
             do {
-                let jsonBody = try JSONEncoder().encode(body)
+                let formatter = DateFormatter()
+                formatter.dateFormat = "yyyy-MM-dd"
+                let encoder = JSONEncoder()
+                encoder.dateEncodingStrategy = .formatted(formatter)
+                let jsonBody = try encoder.encode(body)
                 request.httpBody = jsonBody
+                request.setValue("application/json", forHTTPHeaderField: "Content-Type")
             } catch {
-                return Observable<Response>.error(RequestError.encodeError)
+                return Observable<Response>.error(ReiwashiError.encodeError)
             }
         }
         
@@ -42,11 +49,6 @@ enum APIClient {
             .validate(contentType: ["application/json"])
             .data()
             .map { try JSONDecoder().decode(Response.self, from: $0) }
-    }
-    
-    enum RequestError: Error {
-        case invalidPath
-        case encodeError
     }
 }
 

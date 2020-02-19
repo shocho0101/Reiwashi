@@ -9,34 +9,40 @@
 import RxSwift
 import RxCocoa
 import Action
-import RxAlamofire
 import KeychainAccess
-import Alamofire
 
 enum LoginDataGatewayAction: DataGatewayAction {
     
-    struct Input: Encodable {
+    struct Input: Codable {
         let email: String
         let password: String
     }
     
     private struct Response: Codable {
-        let status: String
-        let token: String
+        let status: Status
+        let token: String?
+        
+        enum Status: String, Codable {
+            case success
+            case error
+        }
     }
     
     static func api() -> Action<Input, Void> {
         return .init { input -> Observable<Void> in
             return APIClient.request(.post, path: "users/sign_in", body: input, needAuth: false, responseType: Response.self)
                 .do(onNext: { response in
-                    let keychain = Keychain(service: "jp.2222_d.reiwashi")
-                    keychain["api_token"] = response.token
+                    guard response.status == .success,
+                        let token = response.token else {
+                            throw ReiwashiError.dataGatewayError
+                    }
+                    Auth.token = token
                 }).map { _ in () }
         }
     }
     
     static func mock() -> Action<Input, Void> {
-        return .init { word -> Observable<Void> in
+        return .init { input -> Observable<Void> in
             return Observable.just(()).delay(.seconds(1), scheduler: MainScheduler.instance)
         }
     }

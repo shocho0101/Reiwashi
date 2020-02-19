@@ -10,8 +10,6 @@ import Foundation
 import RxSwift
 import RxCocoa
 import Action
-import RxAlamofire
-import Alamofire
 
 enum AddWordDataGatewayAction: DataGatewayAction {
     struct Input: Codable {

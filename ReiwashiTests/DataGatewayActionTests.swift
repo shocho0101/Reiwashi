@@ -10,11 +10,11 @@ import XCTest
 import RxSwift
 @testable import Reiwashi
 
-class AddWordDataGatewayActionTests: XCTestCase {
+class DataGatewayActionTests: XCTestCase {
     
     let disposeBag = DisposeBag()
     
-    func testApi() {
+    func testAddWord() {
         let exp = expectation(description: "api")
         
         let input = AddWordDataGatewayAction.Input(name: "test")
