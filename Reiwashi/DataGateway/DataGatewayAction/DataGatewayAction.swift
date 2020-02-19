@@ -16,5 +16,4 @@ protocol DataGatewayAction {
     associatedtype Output
     
     static func api() -> Action<Input, Output>
-    static func mock() -> Action<Input, Output>
 }

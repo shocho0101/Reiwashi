@@ -9,7 +9,6 @@
 import RxSwift
 import RxCocoa
 import Action
-import KeychainAccess
 
 enum LoginDataGatewayAction: DataGatewayAction {
     
@@ -38,12 +37,6 @@ enum LoginDataGatewayAction: DataGatewayAction {
                     }
                     Auth.token = token
                 }).map { _ in () }
-        }
-    }
-    
-    static func mock() -> Action<Input, Void> {
-        return .init { input -> Observable<Void> in
-            return Observable.just(()).delay(.seconds(1), scheduler: MainScheduler.instance)
         }
     }
 }
