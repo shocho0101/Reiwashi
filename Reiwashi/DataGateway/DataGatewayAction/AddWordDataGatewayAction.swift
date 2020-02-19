@@ -41,19 +41,9 @@ enum AddWordDataGatewayAction: DataGatewayAction {
                     case .already:
                         return .already
                     case .error:
-                        throw APIError.error
+                        throw ReiwashiError.dataGatewayError
                     }
                 }
         }
-    }
-    
-    static func mock() -> Action<Input, Output> {
-        return .init { _ -> Observable<Output> in
-            return Observable.just(.success).delay(.seconds(1), scheduler: MainScheduler.instance)
-        }
-    }
-    
-    enum APIError: Error {
-        case error
     }
 }
