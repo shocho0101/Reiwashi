@@ -13,4 +13,5 @@ enum ReiwashiError: Error {
     case invalidPath
     case encodeError
     case dataGatewayError
+    case already
 }

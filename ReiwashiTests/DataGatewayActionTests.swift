@@ -14,11 +14,11 @@ class DataGatewayActionTests: XCTestCase {
     
     let disposeBag = DisposeBag()
     
-    func testAddWord() {
+    func testAddFab() {
         let exp = expectation(description: "api")
         
-        let input = AddWordDataGatewayAction.Input(name: "test")
-        let action = AddWordDataGatewayAction.api()
+        let input = AddFabDataGatewayAction.Input(wordId: 4)
+        let action = AddFabDataGatewayAction.api()
         
         action.execute(input)
             .subscribe(onNext: { _ in
@@ -28,4 +28,53 @@ class DataGatewayActionTests: XCTestCase {
         
         wait(for: [exp], timeout: 5)
     }
+    
+    func testDeleteFab() {
+        let exp = expectation(description: "api")
+        
+        let input = DeleteFabDataGatewayAction.Input(wordId: 4)
+        let action = DeleteFabDataGatewayAction.api()
+        
+        action.execute(input)
+            .subscribe(onNext: { _ in
+                exp.fulfill()
+            })
+            .disposed(by: disposeBag)
+        
+        wait(for: [exp], timeout: 5)
+    }
+    
+    func testGetFabList() {
+        let exp = expectation(description: "api")
+        
+        let action = GetFabListDataGatewayAction.api()
+        
+        action.execute(())
+            .subscribe(onNext: { _ in
+                exp.fulfill()
+            }, onError: { error in
+                print(error)
+            })
+            .disposed(by: disposeBag)
+        
+        wait(for: [exp], timeout: 5)
+    }
+    
+    func testGetFab() {
+        let exp = expectation(description: "api")
+        
+        let action = GetFabDataGatewayAction.api()
+        
+        action.execute(.init(wordId: 4))
+            .subscribe(onNext: { _ in
+                exp.fulfill()
+            }, onError: { error in
+                print(error)
+            })
+            .disposed(by: disposeBag)
+        
+        wait(for: [exp], timeout: 5)
+    }
+    
+    
 }

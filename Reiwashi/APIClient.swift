@@ -34,6 +34,7 @@ enum APIClient {
             let formatter = DateFormatter()
             formatter.dateFormat = "yyyy-MM-dd"
             let encoder = JSONEncoder()
+            encoder.keyEncodingStrategy = .convertToSnakeCase
             encoder.dateEncodingStrategy = .formatted(formatter)
             let jsonBody = try encoder.encode(body)
             request.httpBody = jsonBody
@@ -47,7 +48,11 @@ enum APIClient {
             .validate(statusCode: 200..<300)
             .validate(contentType: ["application/json"])
             .data()
-            .map { try JSONDecoder().decode(Response.self, from: $0) }
+            .map {
+                let decoder = JSONDecoder()
+                decoder.keyDecodingStrategy = .convertFromSnakeCase
+                return try decoder.decode(Response.self, from: $0)
+        }
     }
     
     static func request<Response: Decodable>(_ method: HTTPMethod, path: String, needAuth: Bool, responseType: Response.Type) -> Observable<Response> {
@@ -69,7 +74,11 @@ enum APIClient {
             .validate(statusCode: 200..<300)
             .validate(contentType: ["application/json"])
             .data()
-            .map { try JSONDecoder().decode(Response.self, from: $0) }
+            .map {
+                let decoder = JSONDecoder()
+                decoder.keyDecodingStrategy = .convertFromSnakeCase
+                return try decoder.decode(Response.self, from: $0)
+        }
     }
 }
 

@@ -1,19 +1,18 @@
 //
-//  AddWordDataGatewayAction.swift
+//  AddFabDatagatewayAction.swift
 //  Reiwashi
 //
-//  Created by 張翔 on 2020/02/16.
+//  Created by 張翔 on 2020/02/19.
 //  Copyright © 2020 2222_d. All rights reserved.
 //
 
-import Foundation
-import RxSwift
-import RxCocoa
 import Action
+import RxSwift
 
-enum AddWordDataGatewayAction: DataGatewayAction {
+enum AddFabDataGatewayAction: DataGatewayAction {
+    
     struct Input: Codable {
-        let name: String
+        var wordId: Int
     }
     
     private struct Response: Codable {
@@ -27,10 +26,10 @@ enum AddWordDataGatewayAction: DataGatewayAction {
     }
     
     static func api() -> Action<Input, Void> {
-        return Action.init { input -> Observable<Void> in
-            return APIClient.request(.post, path: "words", body: input, needAuth: true, responseType: Response.self)
-                .map { responce in
-                    switch responce.status {
+        return .init { input -> Observable<Void> in
+            return APIClient.request(.post, path: "fabs", body: input, needAuth: true, responseType: Response.self)
+                .map { response in
+                    switch response.status {
                     case .success:
                         return ()
                     case .already:
@@ -38,7 +37,7 @@ enum AddWordDataGatewayAction: DataGatewayAction {
                     case .error:
                         throw ReiwashiError.dataGatewayError
                     }
-                }
+            }
         }
     }
 }
