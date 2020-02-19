@@ -36,6 +36,8 @@
 		CADAB2ED23FD32C700B3BC3A /* GetFabListDatagatewayAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = CADAB2EC23FD32C700B3BC3A /* GetFabListDatagatewayAction.swift */; };
 		CADAB2EF23FD363000B3BC3A /* GetFabDatagatewayAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = CADAB2EE23FD363000B3BC3A /* GetFabDatagatewayAction.swift */; };
 		CADAB2F123FD36F400B3BC3A /* Fab.swift in Sources */ = {isa = PBXBuildFile; fileRef = CADAB2F023FD36F400B3BC3A /* Fab.swift */; };
+		CADAB2F623FD3A2200B3BC3A /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CADAB2F423FD3A2200B3BC3A /* WelcomeViewController.swift */; };
+		CADAB2F723FD3A2200B3BC3A /* WelcomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CADAB2F523FD3A2200B3BC3A /* WelcomeViewController.xib */; };
 		CADB139723FBF0B5002B453A /* RxAlamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CADB139623FBF0B5002B453A /* RxAlamofire.framework */; };
 		CADB139823FBF0B5002B453A /* RxAlamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CADB139623FBF0B5002B453A /* RxAlamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CADB139A23FBF156002B453A /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CADB139923FBF156002B453A /* Alamofire.framework */; };
@@ -123,6 +125,8 @@
 		CADAB2EC23FD32C700B3BC3A /* GetFabListDatagatewayAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetFabListDatagatewayAction.swift; sourceTree = "<group>"; };
 		CADAB2EE23FD363000B3BC3A /* GetFabDatagatewayAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetFabDatagatewayAction.swift; sourceTree = "<group>"; };
 		CADAB2F023FD36F400B3BC3A /* Fab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fab.swift; sourceTree = "<group>"; };
+		CADAB2F423FD3A2200B3BC3A /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		CADAB2F523FD3A2200B3BC3A /* WelcomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WelcomeViewController.xib; sourceTree = "<group>"; };
 		CADB139623FBF0B5002B453A /* RxAlamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxAlamofire.framework; path = Carthage/Build/iOS/RxAlamofire.framework; sourceTree = "<group>"; };
 		CADB139923FBF156002B453A /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		CAFE98C923F78DC400F19152 /* Reiwashi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Reiwashi.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -214,6 +218,8 @@
 		CA471A6623F981B2000D438D /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				CADAB2F323FD3A0C00B3BC3A /* Welcome */,
+				CADAB2F223FD39DF00B3BC3A /* Login */,
 				CAFE995123F909BF00F19152 /* AddHistory */,
 				CAFE995023F909AC00F19152 /* History */,
 			);
@@ -236,6 +242,22 @@
 				CADAB2F023FD36F400B3BC3A /* Fab.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		CADAB2F223FD39DF00B3BC3A /* Login */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		CADAB2F323FD3A0C00B3BC3A /* Welcome */ = {
+			isa = PBXGroup;
+			children = (
+				CADAB2F423FD3A2200B3BC3A /* WelcomeViewController.swift */,
+				CADAB2F523FD3A2200B3BC3A /* WelcomeViewController.xib */,
+			);
+			path = Welcome;
 			sourceTree = "<group>";
 		};
 		CAFE98C023F78DC300F19152 = {
@@ -440,6 +462,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CADAB2F723FD3A2200B3BC3A /* WelcomeViewController.xib in Resources */,
 				CAFE98D923F78DC700F19152 /* LaunchScreen.storyboard in Resources */,
 				CAFE98D623F78DC700F19152 /* Assets.xcassets in Resources */,
 				CAFE994423F8CE8900F19152 /* HistoryViewController.xib in Resources */,
@@ -536,6 +559,7 @@
 				CA06A3DB23F9140500999BAD /* DataGatewayAction.swift in Sources */,
 				CAFE995323F90A3200F19152 /* AddHistoryViewModel.swift in Sources */,
 				CAD4E95823FC01F80069B475 /* LoginDataGatewayAction.swift in Sources */,
+				CADAB2F623FD3A2200B3BC3A /* WelcomeViewController.swift in Sources */,
 				CA06A3DE23F9153200999BAD /* AddWordDataGatewayAction.swift in Sources */,
 				CADAB2E923FD1C9B00B3BC3A /* AddFabDatagatewayAction.swift in Sources */,
 				CAFE98CF23F78DC400F19152 /* SceneDelegate.swift in Sources */,

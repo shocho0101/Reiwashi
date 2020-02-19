@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WelcomeViewController" customModule="Reiwashi" customModuleProvider="target">
+            <connections>
+                <outlet property="loginButton" destination="nKK-hr-7if" id="Tqe-Ke-Yld"/>
+                <outlet property="signInButton" destination="xku-fg-8Im" id="wz6-ik-lXW"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nKK-hr-7if">
+                    <rect key="frame" x="176" y="706" width="62" height="30"/>
+                    <state key="normal" title="ログイン"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xku-fg-8Im">
+                    <rect key="frame" x="176" y="772" width="62" height="30"/>
+                    <state key="normal" title="新規登録"/>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="令和史へようこそ！" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GZ6-jO-lOe">
+                    <rect key="frame" x="129" y="284" width="156" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="xku-fg-8Im" secondAttribute="bottom" constant="60" id="Hqg-na-Hul"/>
+                <constraint firstItem="GZ6-jO-lOe" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="K0o-yy-jsP"/>
+                <constraint firstItem="GZ6-jO-lOe" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="240" id="LGp-UT-zag"/>
+                <constraint firstItem="xku-fg-8Im" firstAttribute="top" secondItem="nKK-hr-7if" secondAttribute="bottom" constant="36" id="UR7-G3-AFb"/>
+                <constraint firstItem="xku-fg-8Im" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="nzG-z9-xGc"/>
+                <constraint firstItem="nKK-hr-7if" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="pkt-t5-yEM"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="139" y="111"/>
+        </view>
+    </objects>
+</document>
