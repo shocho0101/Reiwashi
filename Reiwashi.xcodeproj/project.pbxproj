@@ -38,6 +38,10 @@
 		CADAB2F123FD36F400B3BC3A /* Fab.swift in Sources */ = {isa = PBXBuildFile; fileRef = CADAB2F023FD36F400B3BC3A /* Fab.swift */; };
 		CADAB2F623FD3A2200B3BC3A /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CADAB2F423FD3A2200B3BC3A /* WelcomeViewController.swift */; };
 		CADAB2F723FD3A2200B3BC3A /* WelcomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CADAB2F523FD3A2200B3BC3A /* WelcomeViewController.xib */; };
+		CADAB30D23FD41D100B3BC3A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CADAB30B23FD41D100B3BC3A /* LoginViewController.swift */; };
+		CADAB30E23FD41D100B3BC3A /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CADAB30C23FD41D100B3BC3A /* LoginViewController.xib */; };
+		CADAB31323FD421B00B3BC3A /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CADAB31123FD421B00B3BC3A /* SignInViewController.swift */; };
+		CADAB31423FD421B00B3BC3A /* SignInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CADAB31223FD421B00B3BC3A /* SignInViewController.xib */; };
 		CADB139723FBF0B5002B453A /* RxAlamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CADB139623FBF0B5002B453A /* RxAlamofire.framework */; };
 		CADB139823FBF0B5002B453A /* RxAlamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CADB139623FBF0B5002B453A /* RxAlamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CADB139A23FBF156002B453A /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CADB139923FBF156002B453A /* Alamofire.framework */; };
@@ -127,6 +131,10 @@
 		CADAB2F023FD36F400B3BC3A /* Fab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fab.swift; sourceTree = "<group>"; };
 		CADAB2F423FD3A2200B3BC3A /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		CADAB2F523FD3A2200B3BC3A /* WelcomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WelcomeViewController.xib; sourceTree = "<group>"; };
+		CADAB30B23FD41D100B3BC3A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		CADAB30C23FD41D100B3BC3A /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		CADAB31123FD421B00B3BC3A /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		CADAB31223FD421B00B3BC3A /* SignInViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignInViewController.xib; sourceTree = "<group>"; };
 		CADB139623FBF0B5002B453A /* RxAlamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxAlamofire.framework; path = Carthage/Build/iOS/RxAlamofire.framework; sourceTree = "<group>"; };
 		CADB139923FBF156002B453A /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		CAFE98C923F78DC400F19152 /* Reiwashi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Reiwashi.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -220,6 +228,7 @@
 			children = (
 				CADAB2F323FD3A0C00B3BC3A /* Welcome */,
 				CADAB2F223FD39DF00B3BC3A /* Login */,
+				CADAB2FC23FD3B7700B3BC3A /* SignIn */,
 				CAFE995123F909BF00F19152 /* AddHistory */,
 				CAFE995023F909AC00F19152 /* History */,
 			);
@@ -247,6 +256,8 @@
 		CADAB2F223FD39DF00B3BC3A /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				CADAB30B23FD41D100B3BC3A /* LoginViewController.swift */,
+				CADAB30C23FD41D100B3BC3A /* LoginViewController.xib */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -258,6 +269,15 @@
 				CADAB2F523FD3A2200B3BC3A /* WelcomeViewController.xib */,
 			);
 			path = Welcome;
+			sourceTree = "<group>";
+		};
+		CADAB2FC23FD3B7700B3BC3A /* SignIn */ = {
+			isa = PBXGroup;
+			children = (
+				CADAB31123FD421B00B3BC3A /* SignInViewController.swift */,
+				CADAB31223FD421B00B3BC3A /* SignInViewController.xib */,
+			);
+			path = SignIn;
 			sourceTree = "<group>";
 		};
 		CAFE98C023F78DC300F19152 = {
@@ -464,7 +484,9 @@
 			files = (
 				CADAB2F723FD3A2200B3BC3A /* WelcomeViewController.xib in Resources */,
 				CAFE98D923F78DC700F19152 /* LaunchScreen.storyboard in Resources */,
+				CADAB30E23FD41D100B3BC3A /* LoginViewController.xib in Resources */,
 				CAFE98D623F78DC700F19152 /* Assets.xcassets in Resources */,
+				CADAB31423FD421B00B3BC3A /* SignInViewController.xib in Resources */,
 				CAFE994423F8CE8900F19152 /* HistoryViewController.xib in Resources */,
 				CAFE994F23F909A400F19152 /* AddHistoryViewController.xib in Resources */,
 			);
@@ -540,6 +562,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CADAB31323FD421B00B3BC3A /* SignInViewController.swift in Sources */,
+				CADAB30D23FD41D100B3BC3A /* LoginViewController.swift in Sources */,
 				CADAB2D723FC2B8600B3BC3A /* User.swift in Sources */,
 				CADAB2ED23FD32C700B3BC3A /* GetFabListDatagatewayAction.swift in Sources */,
 				CADAB2DB23FC40E900B3BC3A /* APIClient.swift in Sources */,

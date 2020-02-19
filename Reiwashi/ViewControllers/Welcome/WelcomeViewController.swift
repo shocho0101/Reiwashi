@@ -15,6 +15,8 @@ class WelcomeViewController: UIViewController {
     @IBOutlet var loginButton: UIButton!
     @IBOutlet var signInButton: UIButton!
     
+    let disposableBag = DisposeBag()
+    
     init() {
         super.init(nibName: nil, bundle: Bundle(for: type(of: self)))
     }
@@ -23,11 +25,17 @@ class WelcomeViewController: UIViewController {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
         
+        loginButton.rx.tap.asDriver().drive(onNext: { [navigationController] _ in
+            navigationController?.pushViewController(LoginViewController(), animated: true)
+        }).disposed(by: disposableBag)
+        
+        signInButton.rx.tap.asDriver().drive(onNext: { [navigationController] _ in
+            navigationController?.pushViewController(SignInViewController(), animated: true)
+        }).disposed(by: disposableBag)
     }
-
+    
 }
