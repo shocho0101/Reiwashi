@@ -63,8 +63,8 @@ class AddHistoryViewController: UIViewController {
         })
         .disposed(by: disposeBag)
         
-        viewModel.popViewController.drive (onNext: { [weak self] in
-            self?.navigationController?.popViewController(animated: true)
+        viewModel.dismissViewController.drive (onNext: { [weak self] in
+            self?.dismiss(animated: true, completion: nil)
         })
         .disposed(by: disposeBag)
         
