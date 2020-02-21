@@ -21,7 +21,7 @@ extension SignInViewController {
         
         private let action = DataGateway.getAction(SignUpDataGatewayAction.self)
         
-        private lazy var signInInfo = BehaviorRelay.combineLatest(name, email, sex, birthday, place, password).share()
+        private lazy var signInInfo = BehaviorRelay.combineLatest(name, email, sex, birthday, place, password)
         
         private let disposeBag = DisposeBag()
         
@@ -50,7 +50,7 @@ extension SignInViewController {
         
         var isButtonEnabled: Driver<Bool> {
             return Observable.combineLatest(
-                signInInfo.map { $0.isEmpty || $1.isEmpty || $2 == nil || $4 == nil && $5.isEmpty },
+                signInInfo.map { $0.isEmpty || $1.isEmpty || $2 == nil || $4 == nil || $5.isEmpty },
                 action.executing)
                 .map { !$0 && !$1 }
                 .asDriver(onErrorDriveWith: .empty())

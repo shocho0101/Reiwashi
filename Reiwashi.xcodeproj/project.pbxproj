@@ -11,6 +11,9 @@
 		CA06A3DB23F9140500999BAD /* DataGatewayAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA06A3DA23F9140500999BAD /* DataGatewayAction.swift */; };
 		CA06A3DE23F9153200999BAD /* AddWordDataGatewayAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA06A3DD23F9153200999BAD /* AddWordDataGatewayAction.swift */; };
 		CA471A6523F97FAD000D438D /* SVProgressHUD+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA471A6423F97FAD000D438D /* SVProgressHUD+Extensions.swift */; };
+		CA4FB4232400251200159632 /* MyPageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA4FB4212400251200159632 /* MyPageViewController.xib */; };
+		CA4FB4252400259F00159632 /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4FB4242400259F00159632 /* MyPageViewController.swift */; };
+		CA4FB427240025E100159632 /* MyPageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4FB426240025E100159632 /* MyPageViewModel.swift */; };
 		CA71FBD123F928FD00E9DE66 /* Action.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA71FBD023F928FD00E9DE66 /* Action.framework */; };
 		CA71FBD223F928FD00E9DE66 /* Action.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CA71FBD023F928FD00E9DE66 /* Action.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CA71FBD423F978D900E9DE66 /* UIAlertController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA71FBD323F978D900E9DE66 /* UIAlertController+Extensions.swift */; };
@@ -109,6 +112,9 @@
 		CA06A3DA23F9140500999BAD /* DataGatewayAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataGatewayAction.swift; sourceTree = "<group>"; };
 		CA06A3DD23F9153200999BAD /* AddWordDataGatewayAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWordDataGatewayAction.swift; sourceTree = "<group>"; };
 		CA471A6423F97FAD000D438D /* SVProgressHUD+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SVProgressHUD+Extensions.swift"; sourceTree = "<group>"; };
+		CA4FB4212400251200159632 /* MyPageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyPageViewController.xib; sourceTree = "<group>"; };
+		CA4FB4242400259F00159632 /* MyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
+		CA4FB426240025E100159632 /* MyPageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewModel.swift; sourceTree = "<group>"; };
 		CA71FBD023F928FD00E9DE66 /* Action.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Action.framework; path = Carthage/Build/iOS/Action.framework; sourceTree = "<group>"; };
 		CA71FBD323F978D900E9DE66 /* UIAlertController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertController+Extensions.swift"; sourceTree = "<group>"; };
 		CAD4E94823FBFD890069B475 /* DataGatewayActionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataGatewayActionTests.swift; sourceTree = "<group>"; };
@@ -230,6 +236,7 @@
 		CA471A6623F981B2000D438D /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				CA4FB41F240024C700159632 /* MyPage */,
 				CADAB2F323FD3A0C00B3BC3A /* Welcome */,
 				CADAB2F223FD39DF00B3BC3A /* Login */,
 				CADAB2FC23FD3B7700B3BC3A /* SignIn */,
@@ -237,6 +244,16 @@
 				CAFE995023F909AC00F19152 /* History */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		CA4FB41F240024C700159632 /* MyPage */ = {
+			isa = PBXGroup;
+			children = (
+				CA4FB4242400259F00159632 /* MyPageViewController.swift */,
+				CA4FB426240025E100159632 /* MyPageViewModel.swift */,
+				CA4FB4212400251200159632 /* MyPageViewController.xib */,
+			);
+			path = MyPage;
 			sourceTree = "<group>";
 		};
 		CA71FBD523F9799400E9DE66 /* Extensions */ = {
@@ -491,6 +508,7 @@
 				CADAB2F723FD3A2200B3BC3A /* WelcomeViewController.xib in Resources */,
 				CAFE98D923F78DC700F19152 /* LaunchScreen.storyboard in Resources */,
 				CADAB30E23FD41D100B3BC3A /* LoginViewController.xib in Resources */,
+				CA4FB4232400251200159632 /* MyPageViewController.xib in Resources */,
 				CAFE98D623F78DC700F19152 /* Assets.xcassets in Resources */,
 				CADAB31423FD421B00B3BC3A /* SignInViewController.xib in Resources */,
 				CAFE994423F8CE8900F19152 /* HistoryViewController.xib in Resources */,
@@ -585,6 +603,7 @@
 				CADAB31C23FE73A800B3BC3A /* SignInViewModel.swift in Sources */,
 				CADAB2F123FD36F400B3BC3A /* Fab.swift in Sources */,
 				CADAB2DD23FD088100B3BC3A /* Auth.swift in Sources */,
+				CA4FB4252400259F00159632 /* MyPageViewController.swift in Sources */,
 				CA71FBD423F978D900E9DE66 /* UIAlertController+Extensions.swift in Sources */,
 				CAFE98CD23F78DC400F19152 /* AppDelegate.swift in Sources */,
 				CA06A3DB23F9140500999BAD /* DataGatewayAction.swift in Sources */,
@@ -598,6 +617,7 @@
 				CAFE994323F8CE8900F19152 /* HistoryViewController.swift in Sources */,
 				CAFE994E23F909A400F19152 /* AddHistoryViewController.swift in Sources */,
 				CADAB2E323FD15FB00B3BC3A /* ChangeUserInfoDataGatewayAction.swift in Sources */,
+				CA4FB427240025E100159632 /* MyPageViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
