@@ -19,32 +19,35 @@ enum GetHistoryDataGatewayAction: DataGatewayAction {
             case year
         }
     }
-
+    
     
     static func api() -> Action<Input, [Word]> {
-        return .init { input -> Observable<[Word]> in
-            return APIClient.request(.get, path: "words/api?period=" + input.period.rawValue + "&page=" + input.page.description, needAuth: false, responseType: History.self)
-                .map{ history in
-                    //fabCountを含んだwordを返す
-                    history.word.map { word in
-                        return Word(id: word.id,
-                                    fabCount: history.fabs[String(word.id)]!,
-                                    name: word.name,
-                                    userId: word.userId,
-                                    tagId: word.tagId,
-                                    sex: word.sex,
-                                    birthday: word.birthday,
-                                    place: word.place,
-                                    isFab: false,
-                                    createdAt: word.createdAt,
-                                    updatedAt: word.updatedAt)
-                    }
-                    
-                    
+        return Action<Input, [Word]>.init { input -> Observable<[Word]> in
+            return Observable.create { observer -> Disposable in
+                APIClient.request(.get, path: "words/api?period=" + input.period.rawValue + "&page=" + input.page.description, needAuth: false, responseType: History.self)
+                    .subscribe(onNext: { history in
+                        APIClient.request(.get, path: "fabs/mypage", needAuth: true, responseType: [Fab].self)
+                            .subscribe(onNext: { fabs in
+                                let words = history.word.map { word in
+                                    return Word(id: word.id,
+                                                fabCount: history.fabs[String(word.id)]!,
+                                                name: word.name,
+                                                userId: word.userId,
+                                                tagId: word.tagId,
+                                                sex: word.sex,
+                                                birthday: word.birthday,
+                                                place: word.place,
+                                                isFab: fabs.firstIndex { $0.wordId == word.id } != nil,
+                                                createdAt: word.createdAt,
+                                                updatedAt: word.updatedAt)
+                                }
+                                
+                                observer.onNext(words)
+                                observer.onCompleted()
+                            })
+                        
+                    })
             }
         }
-//        return .init { input -> Observable<History> in
-//            return Observable.just([Word(id: 1, fabCount: 10, name: "新型コロナ", userId: 1, tagId: nil, sex: .M, birthday: "2020-02-17", place: .tokyo),Word(id: 2,  fabCount: 20, name: "篭池理事長", userId: 1, tagId: nil, sex: .M, birthday: "2020-02-18", place: .tokyo)])
-//        }
     }
 }
