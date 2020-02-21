@@ -17,7 +17,7 @@ class DataGatewayActionTests: XCTestCase {
     func testAddFab() {
         let exp = expectation(description: "api")
         
-        let input = AddFabDataGatewayAction.Input(wordId: 4)
+        let input = AddFabDataGatewayAction.Input(wordId: 6)
         let action = AddFabDataGatewayAction.api()
         
         action.execute(input)

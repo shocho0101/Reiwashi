@@ -9,6 +9,13 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SignInViewController" customModule="Reiwashi" customModuleProvider="target">
             <connections>
+                <outlet property="birthdayTextField" destination="jab-hK-EOX" id="vDf-sJ-Vb6"/>
+                <outlet property="emailTextField" destination="HXL-t8-Ld7" id="Vm7-6J-lBt"/>
+                <outlet property="nameTextField" destination="F7I-Id-M3z" id="pt2-G2-J5g"/>
+                <outlet property="passwordTextField" destination="fSS-9I-9y9" id="4cV-ZE-7zl"/>
+                <outlet property="placeTextField" destination="dqz-op-VfD" id="X9n-X3-lDL"/>
+                <outlet property="sexTextField" destination="Cot-Bt-8qt" id="Khg-my-zW1"/>
+                <outlet property="signInButton" destination="dvG-rZ-fj3" id="Vrn-1r-pfX"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
