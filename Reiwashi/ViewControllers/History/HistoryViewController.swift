@@ -12,11 +12,14 @@ import RxSwift
 
 class HistoryViewController: UIViewController {
     
-    @IBOutlet var addButton: UIButton!
+    @IBOutlet var tableView: UITableView!
+    
     
     private let disposeBag = DisposeBag()
+    private let viewModel: ViewModel
     
     init() {
+        self.viewModel = ViewModel()
         super.init(nibName: nil, bundle: Bundle(for: type(of: self)))
     }
     
@@ -24,20 +27,38 @@ class HistoryViewController: UIViewController {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        title = "令和史"
-        
+        setUp()
         bind()
+        viewModel.initRequest()
+//        viewModel.action.execute(GetHistoryDataGatewayAction.Input(period: .month, page: 1))
+    }
+    
+    func setUp() {
+        title = "令和史"
+        tableView.register(UINib(nibName: "NormalTableViewCell", bundle: nil), forCellReuseIdentifier: "NormalTableViewCell")
+        tableView.rowHeight = 70
     }
     
     func bind() {
-        
-        addButton.rx.tap.subscribe(onNext: { [weak self] _ in
-            self?.navigationController?.pushViewController(AddHistoryViewController(), animated: true)
-        })
+        viewModel.action.elements.bind(to: tableView.rx.items(cellIdentifier: "NormalTableViewCell", cellType: NormalTableViewCell.self)) { row, element, cell in
+            cell.word = element
+            cell.config()
+        }
         .disposed(by: disposeBag)
+        
+        tableView.rx.itemSelected
+            .bind(onNext: { indexPath in
+                self.tableView.deselectRow(at: indexPath, animated: true)
+                let cell = self.tableView.cellForRow(at: indexPath) as! NormalTableViewCell
+                cell.setFab()
+            })
+        
     }
 }
+
