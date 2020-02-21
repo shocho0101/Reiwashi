@@ -39,7 +39,7 @@ class NormalTableViewCell: UITableViewCell {
         let formatter = DateFormatter()
         formatter.dateFormat = DateFormatter.dateFormat(fromTemplate: "ydMMM", options: 0, locale: Locale(identifier: "ja_JP"))
         dateLabel.text = formatter.string(from: Date())
-        self.fabImageView.image = self.word.isFab ? UIImage.init(systemName: "star") : UIImage.init(systemName: "star.fill")
+        self.fabImageView.image = !self.word.isFab ? UIImage.init(systemName: "star") : UIImage.init(systemName: "star.fill")
     }
     
     @IBAction func fabButton() {

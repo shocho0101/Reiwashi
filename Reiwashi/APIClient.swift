@@ -12,7 +12,7 @@ import RxAlamofire
 import RxSwift
 
 enum APIClient {
-    private static let baseUrl = "https://neo-tokyo.work:10283/"
+    private static let baseUrl = "https://neo-tokyo.work:10282/"
     
     // TODO: リファクタリングしたい
     static func request<Body: Encodable, Response: Decodable>(_ method: HTTPMethod, path: String, body: Body, needAuth: Bool, responseType: Response.Type) -> Observable<Response> {
