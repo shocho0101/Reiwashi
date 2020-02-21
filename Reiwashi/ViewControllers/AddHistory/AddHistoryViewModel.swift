@@ -37,7 +37,7 @@ extension AddHistoryViewController {
                 .asDriver(onErrorDriveWith: .empty())
         }
         
-        var popViewController: Driver<Void> {
+        var dismissViewController: Driver<Void> {
             return action.elements
                 .map { _ in () }
                 .asDriver(onErrorDriveWith: .empty())

@@ -47,6 +47,7 @@
 		CADAB31423FD421B00B3BC3A /* SignInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CADAB31223FD421B00B3BC3A /* SignInViewController.xib */; };
 		CADAB31623FD42A500B3BC3A /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CADAB31523FD42A500B3BC3A /* LoginViewModel.swift */; };
 		CADAB31C23FE73A800B3BC3A /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CADAB31B23FE73A700B3BC3A /* SignInViewModel.swift */; };
+		CADAB31A23FE72A000B3BC3A /* ModalTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CADAB31923FE72A000B3BC3A /* ModalTabBarController.swift */; };
 		CADB139723FBF0B5002B453A /* RxAlamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CADB139623FBF0B5002B453A /* RxAlamofire.framework */; };
 		CADB139823FBF0B5002B453A /* RxAlamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CADB139623FBF0B5002B453A /* RxAlamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CADB139A23FBF156002B453A /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CADB139923FBF156002B453A /* Alamofire.framework */; };
@@ -145,6 +146,7 @@
 		CADAB31223FD421B00B3BC3A /* SignInViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignInViewController.xib; sourceTree = "<group>"; };
 		CADAB31523FD42A500B3BC3A /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		CADAB31B23FE73A700B3BC3A /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
+		CADAB31923FE72A000B3BC3A /* ModalTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalTabBarController.swift; sourceTree = "<group>"; };
 		CADB139623FBF0B5002B453A /* RxAlamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxAlamofire.framework; path = Carthage/Build/iOS/RxAlamofire.framework; sourceTree = "<group>"; };
 		CADB139923FBF156002B453A /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		CAFE98C923F78DC400F19152 /* Reiwashi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Reiwashi.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -301,6 +303,14 @@
 				CADAB31223FD421B00B3BC3A /* SignInViewController.xib */,
 			);
 			path = SignIn;
+            sourceTree = "<group>";
+        };
+		CADAB31823FE72A000B3BC3A /* ModalTabBarController */ = {
+			isa = PBXGroup;
+			children = (
+				CADAB31923FE72A000B3BC3A /* ModalTabBarController.swift */,
+			);
+			path = ModalTabBarController;
 			sourceTree = "<group>";
 		};
 		CAFE98C023F78DC300F19152 = {
@@ -327,6 +337,7 @@
 		CAFE98CB23F78DC400F19152 /* Reiwashi */ = {
 			isa = PBXGroup;
 			children = (
+				CADAB31823FE72A000B3BC3A /* ModalTabBarController */,
 				CADAB2D523FC2B7D00B3BC3A /* Model */,
 				CA06A3D723F9135F00999BAD /* DataGateway */,
 				CA471A6623F981B2000D438D /* ViewControllers */,
@@ -593,6 +604,7 @@
 				CADAB2DB23FC40E900B3BC3A /* APIClient.swift in Sources */,
 				CADAB2E123FD117B00B3BC3A /* GetUserInfoDatagatewayAction.swift in Sources */,
 				CADAB2D423FC2A8300B3BC3A /* SignUpDatagatewayAction.swift in Sources */,
+				CADAB31A23FE72A000B3BC3A /* ModalTabBarController.swift in Sources */,
 				CADAB2EB23FD306100B3BC3A /* DeleteFabDatagatewayAction.swift in Sources */,
 				CA06A3D923F9137D00999BAD /* DataGateway.swift in Sources */,
 				CADAB2DF23FD0A8700B3BC3A /* ReiwashiError.swift in Sources */,
