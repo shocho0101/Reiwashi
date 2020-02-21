@@ -13,6 +13,7 @@
 		606C3B8623FEBF6800AFC451 /* NormalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606C3B8423FEBF6800AFC451 /* NormalTableViewCell.swift */; };
 		606C3B8723FEBF6800AFC451 /* NormalTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 606C3B8523FEBF6800AFC451 /* NormalTableViewCell.xib */; };
 		606C3B8923FEC06100AFC451 /* Word.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606C3B8823FEC06100AFC451 /* Word.swift */; };
+		60ECB7A123FFB2CC00D605D6 /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60ECB7A023FFB2CC00D605D6 /* History.swift */; };
 		CA06A3D923F9137D00999BAD /* DataGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA06A3D823F9137D00999BAD /* DataGateway.swift */; };
 		CA06A3DB23F9140500999BAD /* DataGatewayAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA06A3DA23F9140500999BAD /* DataGatewayAction.swift */; };
 		CA06A3DE23F9153200999BAD /* AddWordDataGatewayAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA06A3DD23F9153200999BAD /* AddWordDataGatewayAction.swift */; };
@@ -109,6 +110,7 @@
 		606C3B8423FEBF6800AFC451 /* NormalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalTableViewCell.swift; sourceTree = "<group>"; };
 		606C3B8523FEBF6800AFC451 /* NormalTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NormalTableViewCell.xib; sourceTree = "<group>"; };
 		606C3B8823FEC06100AFC451 /* Word.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Word.swift; sourceTree = "<group>"; };
+		60ECB7A023FFB2CC00D605D6 /* History.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
 		CA06A3D823F9137D00999BAD /* DataGateway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataGateway.swift; sourceTree = "<group>"; };
 		CA06A3DA23F9140500999BAD /* DataGatewayAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataGatewayAction.swift; sourceTree = "<group>"; };
 		CA06A3DD23F9153200999BAD /* AddWordDataGatewayAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWordDataGatewayAction.swift; sourceTree = "<group>"; };
@@ -265,6 +267,7 @@
 				CADAB2D623FC2B8600B3BC3A /* User.swift */,
 				CADAB2F023FD36F400B3BC3A /* Fab.swift */,
 				606C3B8823FEC06100AFC451 /* Word.swift */,
+				60ECB7A023FFB2CC00D605D6 /* History.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -575,6 +578,7 @@
 				CAFE995323F90A3200F19152 /* AddHistoryViewModel.swift in Sources */,
 				606C3B8023FE5DF700AFC451 /* HistoryViewModel.swift in Sources */,
 				CAD4E95823FC01F80069B475 /* LoginDataGatewayAction.swift in Sources */,
+				60ECB7A123FFB2CC00D605D6 /* History.swift in Sources */,
 				CA06A3DE23F9153200999BAD /* AddWordDataGatewayAction.swift in Sources */,
 				CADAB2E923FD1C9B00B3BC3A /* AddFabDatagatewayAction.swift in Sources */,
 				CAFE98CF23F78DC400F19152 /* SceneDelegate.swift in Sources */,
