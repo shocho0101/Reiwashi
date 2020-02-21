@@ -1,32 +1,34 @@
 //
-//  AddHistoryViewModel.swift
+//  LoginViewModel.swift
 //  Reiwashi
 //
-//  Created by 張翔 on 2020/02/16.
+//  Created by 張翔 on 2020/02/19.
 //  Copyright © 2020 2222_d. All rights reserved.
 //
 
 import Foundation
-import RxSwift
 import RxCocoa
-import Action
+import RxSwift
 
-extension AddHistoryViewController {
+extension LoginViewController {
     class ViewModel {
-        let word = BehaviorRelay<String>(value: "")
-        let addButtonTapped = PublishRelay<Void>()
+        let email = BehaviorRelay<String>(value: "")
+        let password = BehaviorRelay<String>(value: "")
+        let loginButtonTapped = PublishRelay<Void>()
         
-        private let action = DataGateway.getAction(AddWordDataGatewayAction.self)
+        private lazy var loginInfo = BehaviorRelay.combineLatest(email, password)
+        
+        private let action = DataGateway.getAction(LoginDataGatewayAction.self)
         
         private let disposeBag = DisposeBag()
         
         init() {
-            addButtonTapped
+            loginButtonTapped
                 .withLatestFrom(action.executing)
                 .filter { !$0 }
-                .withLatestFrom(word)
-                .filter { !$0.isEmpty }
-                .map { AddWordDataGatewayAction.Input(name: $0) }
+                .withLatestFrom(loginInfo)
+                .filter { !$0.isEmpty && !$1.isEmpty }
+                .map { LoginDataGatewayAction.Input(email: $0, password: $1) }
                 .bind(to: action.inputs)
                 .disposed(by: disposeBag)
         }
@@ -45,8 +47,8 @@ extension AddHistoryViewController {
         
         var isButtonEnabled: Driver<Bool> {
             return Observable.combineLatest(
-                    word.map { $0.isEmpty },
-                    action.executing)
+                loginInfo.map { $0.isEmpty || $1.isEmpty },
+                action.executing)
                 .map { !$0 && !$1 }
                 .asDriver(onErrorDriveWith: .empty())
         }
@@ -55,5 +57,7 @@ extension AddHistoryViewController {
             return action.executing
                 .asDriver(onErrorDriveWith: .empty())
         }
+        
+        
     }
 }

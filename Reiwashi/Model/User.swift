@@ -8,9 +8,16 @@
 
 import Foundation
 
-enum Sex: String, Codable {
+enum Sex: String, CaseIterable, Codable {
     case M
-    case F
+    case W
+    
+    var name: String {
+        switch self {
+        case .M: return "男性"
+        case .W: return "女性"
+        }
+    }
 }
 
 enum Place: String, CaseIterable, Codable {
