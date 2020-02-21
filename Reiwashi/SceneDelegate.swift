@@ -20,14 +20,30 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         let window = UIWindow(windowScene: windowScene)
         self.window = window
+        
+        if Auth.isLoggedIn {
+            switchViewControllers()
+        } else {
+            switchWelcome()
+        }
+        window.makeKeyAndVisible()
+    }
+    
+    func switchViewControllers() {
+        
         let modalTabBarController = ModalTabBarController()
-        let navigationController = UINavigationController(rootViewController: HistoryViewController())
-        let viewControllers = [navigationController, AddHistoryViewController()]
+        let historyNavigationController = UINavigationController(rootViewController: HistoryViewController())
+        let myPageNavigationController = UINavigationController(rootViewController: MyPageViewController())
+        let viewControllers = [historyNavigationController, AddHistoryViewController(), myPageNavigationController]
         modalTabBarController.setViewControllers(viewControllers, animated: true)
         modalTabBarController.selectedIndex = 0
-//        window.rootViewController = UINavigationController(rootViewController: HistoryViewController())
-        window.rootViewController = modalTabBarController
-        window.makeKeyAndVisible()
+        window?.rootViewController = modalTabBarController
+        
+    }
+    
+    func switchWelcome() {
+        let navigationController = UINavigationController(rootViewController: WelcomeViewController())
+        window?.rootViewController = navigationController
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

@@ -137,8 +137,8 @@ class SignInViewController: UIViewController {
         
         viewModel.dismissViewController
             .drive(onNext: {
-                // TODO: トップページに遷移する。
-                print("新規登録完了")
+                let sceneDelegate = self.view.window?.windowScene?.delegate as! SceneDelegate
+                sceneDelegate.switchViewControllers()
             }).disposed(by: disposeBag)
         
         viewModel.isButtonEnabled

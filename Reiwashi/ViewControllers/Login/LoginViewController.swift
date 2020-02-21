@@ -62,8 +62,8 @@ class LoginViewController: UIViewController {
         
         viewModel.dismissViewController
             .drive(onNext: {
-                // TODO: トップページに遷移する。
-                print("ログイン完了")
+                let sceneDelegate = self.view.window?.windowScene?.delegate as! SceneDelegate
+                sceneDelegate.switchViewControllers()
             }).disposed(by: disposeBag)
         
         viewModel.isButtonEnabled

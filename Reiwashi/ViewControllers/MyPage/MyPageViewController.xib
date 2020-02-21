@@ -9,6 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MyPageViewController" customModule="Reiwashi" customModuleProvider="target">
             <connections>
+                <outlet property="logoutButton" destination="KS0-Oi-imb" id="zcl-Iq-hcU"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

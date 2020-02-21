@@ -41,6 +41,15 @@ class MyPageViewController: UIViewController {
         logoutButton.rx.tap
             .bind(to: viewModel.logoutAction.inputs)
             .disposed(by: disposeBag)
+        
+        viewModel.logoutAction
+            .elements
+            .asDriver(onErrorDriveWith: .empty())
+            .drive(onNext: {
+                let sceneDelegate = self.view.window?.windowScene?.delegate as! SceneDelegate
+                sceneDelegate.switchWelcome()
+            })
+            .disposed(by: disposeBag)
     }
 }
 
