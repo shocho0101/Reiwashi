@@ -26,9 +26,6 @@ extension HistoryViewController {
         func initRequest() {
             action.execute(GetHistoryDataGatewayAction.Input(period: .month, page: 1))
         }
-        
-        
-        
-        
+  
     }
 }

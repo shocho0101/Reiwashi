@@ -21,6 +21,8 @@ class NormalTableViewCell: UITableViewCell {
     
     private var delegate: NormalTableViewCellDelegate!
     var word: Word!
+    let addAction = DataGateway.getAction(AddFabDataGatewayAction.self)
+    let deleteAction = DataGateway.getAction(DeleteFabDataGatewayAction.self)
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -46,8 +48,10 @@ class NormalTableViewCell: UITableViewCell {
     func setFab() {
         if word.isFab {
             word.fabCount -= 1
+            deleteAction.execute(DeleteFabDataGatewayAction.Input(wordId: word.id))
         } else {
             word.fabCount += 1
+            addAction.execute(AddFabDataGatewayAction.Input(wordId: word.id))
         }
         UIView.transition(with: fabImageView, duration: 0.5, options: [.transitionCrossDissolve], animations: {
             self.fabImageView.image = self.word.isFab ? UIImage.init(systemName: "star") : UIImage.init(systemName: "star.fill")
