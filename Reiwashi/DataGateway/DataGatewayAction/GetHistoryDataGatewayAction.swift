@@ -34,9 +34,6 @@ enum GetHistoryDataGatewayAction: DataGatewayAction {
                                                 name: word.name,
                                                 userId: word.userId,
                                                 tagId: word.tagId,
-                                                sex: word.sex,
-                                                birthday: word.birthday,
-                                                place: word.place,
                                                 isFab: fabs.firstIndex { $0.wordId == word.id } != nil,
                                                 createdAt: word.createdAt,
                                                 updatedAt: word.updatedAt)
