@@ -34,7 +34,10 @@ enum GetHistoryDataGatewayAction: DataGatewayAction {
                                     tagId: word.tagId,
                                     sex: word.sex,
                                     birthday: word.birthday,
-                                    place: word.place)
+                                    place: word.place,
+                                    isFab: false,
+                                    createdAt: word.createdAt,
+                                    updatedAt: word.updatedAt)
                     }
                     
                     

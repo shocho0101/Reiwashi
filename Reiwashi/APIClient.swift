@@ -49,7 +49,10 @@ enum APIClient {
             .validate(contentType: ["application/json"])
             .data()
             .map {
-                let decoder = JSONDecoder()
+                let formatter = DateFormatter()
+                formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"
+                let decoder: JSONDecoder = JSONDecoder()
+                decoder.dateDecodingStrategy = .formatted(formatter)
                 decoder.keyDecodingStrategy = .convertFromSnakeCase
                 return try decoder.decode(Response.self, from: $0)
         }
@@ -75,7 +78,10 @@ enum APIClient {
             .validate(contentType: ["application/json"])
             .data()
             .map {
-                let decoder = JSONDecoder()
+                let formatter = DateFormatter()
+                formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"
+                let decoder: JSONDecoder = JSONDecoder()
+                decoder.dateDecodingStrategy = .formatted(formatter)
                 decoder.keyDecodingStrategy = .convertFromSnakeCase
                 return try decoder.decode(Response.self, from: $0)
         }

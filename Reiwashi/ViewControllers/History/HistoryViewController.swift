@@ -14,8 +14,10 @@ class HistoryViewController: UIViewController {
     
     @IBOutlet var tableView: UITableView!
     
+    
     private let disposeBag = DisposeBag()
     private let viewModel: ViewModel
+    
     init() {
         self.viewModel = ViewModel()
         super.init(nibName: nil, bundle: Bundle(for: type(of: self)))
@@ -40,23 +42,23 @@ class HistoryViewController: UIViewController {
     func setUp() {
         title = "令和史"
         tableView.register(UINib(nibName: "NormalTableViewCell", bundle: nil), forCellReuseIdentifier: "NormalTableViewCell")
-        tableView.rowHeight = 50.0
+        tableView.rowHeight = 70
     }
     
     func bind() {
         viewModel.action.elements.bind(to: tableView.rx.items(cellIdentifier: "NormalTableViewCell", cellType: NormalTableViewCell.self)) { row, element, cell in
-                cell.nameLabel.text = element.name
+            cell.word = element
+            cell.config()
         }
         .disposed(by: disposeBag)
         
         tableView.rx.itemSelected
             .bind(onNext: { indexPath in
                 self.tableView.deselectRow(at: indexPath, animated: true)
-                // TODO: 通信処理
                 let cell = self.tableView.cellForRow(at: indexPath) as! NormalTableViewCell
-                cell.setFab(isFab: true)
+                cell.setFab()
             })
-        .disposed(by: disposeBag)
+        
     }
 }
 

@@ -9,26 +9,27 @@
 import Foundation
 
 struct Word: Codable {
-        var id: Int
+    var id: Int
     var fabCount: Int
-        var name: String
-        var userId: Int
-        var tagId: String?
-        var sex: Sex
-        var birthday: String
-        var place: Place
-//        var createdAt: Date
-//        var updatedAt: Date
-    }
+    var name: String
+    var userId: Int
+    var tagId: String?
+    var sex: Sex
+    var birthday: String
+    var place: Place
+    var isFab: Bool
+    var createdAt: Date
+    var updatedAt: Date
+}
 
 struct WordWithOutFabCount: Codable {
-        var id: Int
-        var name: String
-        var userId: Int
-        var tagId: String?
-        var sex: Sex
-        var birthday: String
-        var place: Place
-//        var createdAt: Date
-//        var updatedAt: Date
-    }
+    var id: Int
+    var name: String
+    var userId: Int
+    var tagId: String?
+    var sex: Sex
+    var birthday: String
+    var place: Place
+    var createdAt: Date
+    var updatedAt: Date
+}
