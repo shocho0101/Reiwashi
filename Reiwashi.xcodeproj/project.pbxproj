@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		606C3B7E23FE4EC800AFC451 /* ModalTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606C3B7D23FE4EC700AFC451 /* ModalTabBarController.swift */; };
+		606C3B8023FE5DF700AFC451 /* HistoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606C3B7F23FE5DF700AFC451 /* HistoryViewModel.swift */; };
+		606C3B8223FE626800AFC451 /* GetHistoryDataGatewayAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606C3B8123FE626800AFC451 /* GetHistoryDataGatewayAction.swift */; };
+		606C3B8623FEBF6800AFC451 /* NormalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606C3B8423FEBF6800AFC451 /* NormalTableViewCell.swift */; };
+		606C3B8723FEBF6800AFC451 /* NormalTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 606C3B8523FEBF6800AFC451 /* NormalTableViewCell.xib */; };
+		606C3B8923FEC06100AFC451 /* Word.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606C3B8823FEC06100AFC451 /* Word.swift */; };
 		CA06A3D923F9137D00999BAD /* DataGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA06A3D823F9137D00999BAD /* DataGateway.swift */; };
 		CA06A3DB23F9140500999BAD /* DataGatewayAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA06A3DA23F9140500999BAD /* DataGatewayAction.swift */; };
 		CA06A3DE23F9153200999BAD /* AddWordDataGatewayAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA06A3DD23F9153200999BAD /* AddWordDataGatewayAction.swift */; };
@@ -97,6 +103,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		606C3B7D23FE4EC700AFC451 /* ModalTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalTabBarController.swift; sourceTree = "<group>"; };
+		606C3B7F23FE5DF700AFC451 /* HistoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewModel.swift; sourceTree = "<group>"; };
+		606C3B8123FE626800AFC451 /* GetHistoryDataGatewayAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetHistoryDataGatewayAction.swift; sourceTree = "<group>"; };
+		606C3B8423FEBF6800AFC451 /* NormalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalTableViewCell.swift; sourceTree = "<group>"; };
+		606C3B8523FEBF6800AFC451 /* NormalTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NormalTableViewCell.xib; sourceTree = "<group>"; };
+		606C3B8823FEC06100AFC451 /* Word.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Word.swift; sourceTree = "<group>"; };
 		CA06A3D823F9137D00999BAD /* DataGateway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataGateway.swift; sourceTree = "<group>"; };
 		CA06A3DA23F9140500999BAD /* DataGatewayAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataGatewayAction.swift; sourceTree = "<group>"; };
 		CA06A3DD23F9153200999BAD /* AddWordDataGatewayAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWordDataGatewayAction.swift; sourceTree = "<group>"; };
@@ -183,6 +195,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		606C3B7C23FE4EC700AFC451 /* ModalTabBarController */ = {
+			isa = PBXGroup;
+			children = (
+				606C3B7D23FE4EC700AFC451 /* ModalTabBarController.swift */,
+			);
+			path = ModalTabBarController;
+			sourceTree = "<group>";
+		};
+		606C3B8323FEBF4500AFC451 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				606C3B8423FEBF6800AFC451 /* NormalTableViewCell.swift */,
+				606C3B8523FEBF6800AFC451 /* NormalTableViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		CA06A3D723F9135F00999BAD /* DataGateway */ = {
 			isa = PBXGroup;
 			children = (
@@ -207,6 +236,7 @@
 				CADAB2EA23FD306100B3BC3A /* DeleteFabDatagatewayAction.swift */,
 				CADAB2EC23FD32C700B3BC3A /* GetFabListDatagatewayAction.swift */,
 				CADAB2EE23FD363000B3BC3A /* GetFabDatagatewayAction.swift */,
+				606C3B8123FE626800AFC451 /* GetHistoryDataGatewayAction.swift */,
 			);
 			path = DataGatewayAction;
 			sourceTree = "<group>";
@@ -234,6 +264,7 @@
 			children = (
 				CADAB2D623FC2B8600B3BC3A /* User.swift */,
 				CADAB2F023FD36F400B3BC3A /* Fab.swift */,
+				606C3B8823FEC06100AFC451 /* Word.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -262,6 +293,8 @@
 		CAFE98CB23F78DC400F19152 /* Reiwashi */ = {
 			isa = PBXGroup;
 			children = (
+				606C3B8323FEBF4500AFC451 /* View */,
+				606C3B7C23FE4EC700AFC451 /* ModalTabBarController */,
 				CADAB2D523FC2B7D00B3BC3A /* Model */,
 				CA06A3D723F9135F00999BAD /* DataGateway */,
 				CA471A6623F981B2000D438D /* ViewControllers */,
@@ -318,6 +351,7 @@
 			isa = PBXGroup;
 			children = (
 				CAFE994123F8CE8900F19152 /* HistoryViewController.swift */,
+				606C3B7F23FE5DF700AFC451 /* HistoryViewModel.swift */,
 				CAFE994223F8CE8900F19152 /* HistoryViewController.xib */,
 			);
 			path = History;
@@ -441,6 +475,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CAFE98D923F78DC700F19152 /* LaunchScreen.storyboard in Resources */,
+				606C3B8723FEBF6800AFC451 /* NormalTableViewCell.xib in Resources */,
 				CAFE98D623F78DC700F19152 /* Assets.xcassets in Resources */,
 				CAFE994423F8CE8900F19152 /* HistoryViewController.xib in Resources */,
 				CAFE994F23F909A400F19152 /* AddHistoryViewController.xib in Resources */,
@@ -518,10 +553,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				CADAB2D723FC2B8600B3BC3A /* User.swift in Sources */,
+				606C3B8623FEBF6800AFC451 /* NormalTableViewCell.swift in Sources */,
 				CADAB2ED23FD32C700B3BC3A /* GetFabListDatagatewayAction.swift in Sources */,
 				CADAB2DB23FC40E900B3BC3A /* APIClient.swift in Sources */,
 				CADAB2E123FD117B00B3BC3A /* GetUserInfoDatagatewayAction.swift in Sources */,
 				CADAB2D423FC2A8300B3BC3A /* SignUpDatagatewayAction.swift in Sources */,
+				606C3B7E23FE4EC800AFC451 /* ModalTabBarController.swift in Sources */,
 				CADAB2EB23FD306100B3BC3A /* DeleteFabDatagatewayAction.swift in Sources */,
 				CA06A3D923F9137D00999BAD /* DataGateway.swift in Sources */,
 				CADAB2DF23FD0A8700B3BC3A /* ReiwashiError.swift in Sources */,
@@ -532,13 +569,16 @@
 				CADAB2F123FD36F400B3BC3A /* Fab.swift in Sources */,
 				CADAB2DD23FD088100B3BC3A /* Auth.swift in Sources */,
 				CA71FBD423F978D900E9DE66 /* UIAlertController+Extensions.swift in Sources */,
+				606C3B8923FEC06100AFC451 /* Word.swift in Sources */,
 				CAFE98CD23F78DC400F19152 /* AppDelegate.swift in Sources */,
 				CA06A3DB23F9140500999BAD /* DataGatewayAction.swift in Sources */,
 				CAFE995323F90A3200F19152 /* AddHistoryViewModel.swift in Sources */,
+				606C3B8023FE5DF700AFC451 /* HistoryViewModel.swift in Sources */,
 				CAD4E95823FC01F80069B475 /* LoginDataGatewayAction.swift in Sources */,
 				CA06A3DE23F9153200999BAD /* AddWordDataGatewayAction.swift in Sources */,
 				CADAB2E923FD1C9B00B3BC3A /* AddFabDatagatewayAction.swift in Sources */,
 				CAFE98CF23F78DC400F19152 /* SceneDelegate.swift in Sources */,
+				606C3B8223FE626800AFC451 /* GetHistoryDataGatewayAction.swift in Sources */,
 				CAFE994323F8CE8900F19152 /* HistoryViewController.swift in Sources */,
 				CAFE994E23F909A400F19152 /* AddHistoryViewController.swift in Sources */,
 				CADAB2E323FD15FB00B3BC3A /* ChangeUserInfoDataGatewayAction.swift in Sources */,
@@ -708,7 +748,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = BV8VP6YGE9;
+				DEVELOPMENT_TEAM = 7G4R772ZVB;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -730,7 +770,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = BV8VP6YGE9;
+				DEVELOPMENT_TEAM = 7G4R772ZVB;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",

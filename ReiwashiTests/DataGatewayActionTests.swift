@@ -76,5 +76,22 @@ class DataGatewayActionTests: XCTestCase {
         wait(for: [exp], timeout: 5)
     }
     
+    func testGetHistory() {
+        let exp = expectation(description: "api")
+        
+        let action = GetHistoryDataGatewayAction.api()
+        
+        action.execute(.init(period: .month, page:  1))
+            .subscribe(onNext: { response in
+                print(response)
+                exp.fulfill()
+            }, onError: { error in
+                print(error)
+            })
+            .disposed(by: disposeBag)
+        
+        wait(for: [exp], timeout: 5)
+    }
+    
     
 }
