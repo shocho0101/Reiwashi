@@ -13,8 +13,8 @@ import RxSwift
 class HistoryViewController: UIViewController {
     
     @IBOutlet var tableView: UITableView!
-    
-    
+    @IBOutlet var refineButton: UIBarButtonItem!
+
     private let disposeBag = DisposeBag()
     private let viewModel: ViewModel
     
@@ -40,6 +40,8 @@ class HistoryViewController: UIViewController {
     }
     
     func setUp() {
+        refineButton = UIBarButtonItem(barButtonSystemItem: .search, target: self, action:nil)
+        self.navigationItem.rightBarButtonItems = [refineButton]
         title = "令和史"
         tableView.register(UINib(nibName: "NormalTableViewCell", bundle: nil), forCellReuseIdentifier: "NormalTableViewCell")
         tableView.rowHeight = 70
@@ -58,6 +60,14 @@ class HistoryViewController: UIViewController {
                 let cell = self.tableView.cellForRow(at: indexPath) as! NormalTableViewCell
                 cell.setFab()
             })
+        .disposed(by: disposeBag)
+        
+        refineButton.rx.tap
+            .subscribe(onNext: {
+                let refineViewController = RefineViewController()
+                self.present(refineViewController, animated: true, completion: nil)
+        })
+        .disposed(by: disposeBag)
         
     }
 }

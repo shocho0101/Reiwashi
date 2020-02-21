@@ -14,6 +14,8 @@
 		606C3B8723FEBF6800AFC451 /* NormalTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 606C3B8523FEBF6800AFC451 /* NormalTableViewCell.xib */; };
 		606C3B8923FEC06100AFC451 /* Word.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606C3B8823FEC06100AFC451 /* Word.swift */; };
 		60ECB7A123FFB2CC00D605D6 /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60ECB7A023FFB2CC00D605D6 /* History.swift */; };
+		60ECB7A424004DC800D605D6 /* RefineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60ECB7A224004DC800D605D6 /* RefineViewController.swift */; };
+		60ECB7A524004DC800D605D6 /* RefineViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60ECB7A324004DC800D605D6 /* RefineViewController.xib */; };
 		CA06A3D923F9137D00999BAD /* DataGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA06A3D823F9137D00999BAD /* DataGateway.swift */; };
 		CA06A3DB23F9140500999BAD /* DataGatewayAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA06A3DA23F9140500999BAD /* DataGatewayAction.swift */; };
 		CA06A3DE23F9153200999BAD /* AddWordDataGatewayAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA06A3DD23F9153200999BAD /* AddWordDataGatewayAction.swift */; };
@@ -53,8 +55,8 @@
 		CADAB31323FD421B00B3BC3A /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CADAB31123FD421B00B3BC3A /* SignInViewController.swift */; };
 		CADAB31423FD421B00B3BC3A /* SignInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CADAB31223FD421B00B3BC3A /* SignInViewController.xib */; };
 		CADAB31623FD42A500B3BC3A /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CADAB31523FD42A500B3BC3A /* LoginViewModel.swift */; };
-		CADAB31C23FE73A800B3BC3A /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CADAB31B23FE73A700B3BC3A /* SignInViewModel.swift */; };
 		CADAB31A23FE72A000B3BC3A /* ModalTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CADAB31923FE72A000B3BC3A /* ModalTabBarController.swift */; };
+		CADAB31C23FE73A800B3BC3A /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CADAB31B23FE73A700B3BC3A /* SignInViewModel.swift */; };
 		CADB139723FBF0B5002B453A /* RxAlamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CADB139623FBF0B5002B453A /* RxAlamofire.framework */; };
 		CADB139823FBF0B5002B453A /* RxAlamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CADB139623FBF0B5002B453A /* RxAlamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CADB139A23FBF156002B453A /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CADB139923FBF156002B453A /* Alamofire.framework */; };
@@ -123,6 +125,8 @@
 		606C3B8523FEBF6800AFC451 /* NormalTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NormalTableViewCell.xib; sourceTree = "<group>"; };
 		606C3B8823FEC06100AFC451 /* Word.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Word.swift; sourceTree = "<group>"; };
 		60ECB7A023FFB2CC00D605D6 /* History.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
+		60ECB7A224004DC800D605D6 /* RefineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefineViewController.swift; sourceTree = "<group>"; };
+		60ECB7A324004DC800D605D6 /* RefineViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RefineViewController.xib; sourceTree = "<group>"; };
 		CA06A3D823F9137D00999BAD /* DataGateway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataGateway.swift; sourceTree = "<group>"; };
 		CA06A3DA23F9140500999BAD /* DataGatewayAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataGatewayAction.swift; sourceTree = "<group>"; };
 		CA06A3DD23F9153200999BAD /* AddWordDataGatewayAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWordDataGatewayAction.swift; sourceTree = "<group>"; };
@@ -159,8 +163,8 @@
 		CADAB31123FD421B00B3BC3A /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		CADAB31223FD421B00B3BC3A /* SignInViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignInViewController.xib; sourceTree = "<group>"; };
 		CADAB31523FD42A500B3BC3A /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
-		CADAB31B23FE73A700B3BC3A /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
 		CADAB31923FE72A000B3BC3A /* ModalTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalTabBarController.swift; sourceTree = "<group>"; };
+		CADAB31B23FE73A700B3BC3A /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
 		CADB139623FBF0B5002B453A /* RxAlamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxAlamofire.framework; path = Carthage/Build/iOS/RxAlamofire.framework; sourceTree = "<group>"; };
 		CADB139923FBF156002B453A /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		CAFE98C923F78DC400F19152 /* Reiwashi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Reiwashi.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -337,8 +341,8 @@
 				CADAB31223FD421B00B3BC3A /* SignInViewController.xib */,
 			);
 			path = SignIn;
-            sourceTree = "<group>";
-        };
+			sourceTree = "<group>";
+		};
 		CADAB31823FE72A000B3BC3A /* ModalTabBarController */ = {
 			isa = PBXGroup;
 			children = (
@@ -432,6 +436,8 @@
 				CAFE994123F8CE8900F19152 /* HistoryViewController.swift */,
 				606C3B7F23FE5DF700AFC451 /* HistoryViewModel.swift */,
 				CAFE994223F8CE8900F19152 /* HistoryViewController.xib */,
+				60ECB7A224004DC800D605D6 /* RefineViewController.swift */,
+				60ECB7A324004DC800D605D6 /* RefineViewController.xib */,
 			);
 			path = History;
 			sourceTree = "<group>";
@@ -558,6 +564,7 @@
 				CADAB30E23FD41D100B3BC3A /* LoginViewController.xib in Resources */,
 				CA4FB4232400251200159632 /* MyPageViewController.xib in Resources */,
 				606C3B8723FEBF6800AFC451 /* NormalTableViewCell.xib in Resources */,
+				60ECB7A524004DC800D605D6 /* RefineViewController.xib in Resources */,
 				CAFE98D623F78DC700F19152 /* Assets.xcassets in Resources */,
 				CADAB31423FD421B00B3BC3A /* SignInViewController.xib in Resources */,
 				CAFE994423F8CE8900F19152 /* HistoryViewController.xib in Resources */,
@@ -656,6 +663,7 @@
 				CADAB2F123FD36F400B3BC3A /* Fab.swift in Sources */,
 				CADAB2DD23FD088100B3BC3A /* Auth.swift in Sources */,
 				CA4FB4252400259F00159632 /* MyPageViewController.swift in Sources */,
+				60ECB7A424004DC800D605D6 /* RefineViewController.swift in Sources */,
 				CA71FBD423F978D900E9DE66 /* UIAlertController+Extensions.swift in Sources */,
 				606C3B8923FEC06100AFC451 /* Word.swift in Sources */,
 				CAFE98CD23F78DC400F19152 /* AppDelegate.swift in Sources */,
