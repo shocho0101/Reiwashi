@@ -25,6 +25,7 @@ enum GetHistoryDataGatewayAction: DataGatewayAction {
         return .init { input -> Observable<[Word]> in
             return APIClient.request(.get, path: "words/api?period=" + input.period.rawValue + "&page=" + input.page.description, needAuth: false, responseType: History.self)
                 .map{ history in
+                    //fabCountを含んだwordを返す
                     history.word.map { word in
                         return Word(id: word.id,
                                     fabCount: history.fabs[String(word.id)]!,

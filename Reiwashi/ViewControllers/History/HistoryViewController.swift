@@ -48,6 +48,15 @@ class HistoryViewController: UIViewController {
                 cell.nameLabel.text = element.name
         }
         .disposed(by: disposeBag)
+        
+        tableView.rx.itemSelected
+            .bind(onNext: { indexPath in
+                self.tableView.deselectRow(at: indexPath, animated: true)
+                // TODO: 通信処理
+                let cell = self.tableView.cellForRow(at: indexPath) as! NormalTableViewCell
+                cell.setFab(isFab: true)
+            })
+        .disposed(by: disposeBag)
     }
 }
 
