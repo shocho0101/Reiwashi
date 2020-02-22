@@ -81,7 +81,7 @@ class DataGatewayActionTests: XCTestCase {
         
         let action = GetHistoryDataGatewayAction.api()
         
-        action.execute(.init(period: .month, page:  1))
+        action.execute(.init(period: .month, age: .age10, sex: nil, place: nil, page: 1))
             .subscribe(onNext: { response in
                 print(response)
                 exp.fulfill()

@@ -13,18 +13,32 @@ enum GetHistoryDataGatewayAction: DataGatewayAction {
     
     struct Input {
         let period: Period
+        let age: Age?
+        let sex: Sex?
+        let place: Place?
         let page: Int
-        enum Period: String {
-            case month
-            case year
-        }
     }
     
     
     static func api() -> Action<Input, [Word]> {
         return Action<Input, [Word]>.init { input -> Observable<[Word]> in
             return Observable.create { observer -> Disposable in
-                APIClient.request(.get, path: "words/api?period=" + input.period.rawValue + "&page=" + input.page.description, needAuth: false, responseType: History.self)
+                let periodPath = "?period=" + input.period.rawValue
+                var agePath = ""
+                if let age = input.age {
+                    agePath = "&age=" + age.queryValue
+                }
+                var sexPath = ""
+                if let sex = input.sex {
+                    sexPath = "&sex=" + sex.rawValue
+                }
+                var placePath = ""
+                if let place = input.place {
+                    placePath = "&sex=" + place.rawValue
+                }
+                let pagePath = "&page=" + input.page.description
+                print("words/api" + periodPath + agePath + sexPath + placePath + pagePath)
+                return APIClient.request(.get, path: "words/api" + periodPath + sexPath + placePath + pagePath , needAuth: false, responseType: History.self)
                     .subscribe(onNext: { history in
                         APIClient.request(.get, path: "fabs/mypage", needAuth: true, responseType: [Fab].self)
                             .subscribe(onNext: { fabs in
@@ -34,9 +48,6 @@ enum GetHistoryDataGatewayAction: DataGatewayAction {
                                                 name: word.name,
                                                 userId: word.userId,
                                                 tagId: word.tagId,
-                                                sex: word.sex,
-                                                birthday: word.birthday,
-                                                place: word.place,
                                                 isFab: fabs.firstIndex { $0.wordId == word.id } != nil,
                                                 createdAt: word.createdAt,
                                                 updatedAt: word.updatedAt)

@@ -8,6 +8,60 @@
 
 import Foundation
 
+enum Period: String, CaseIterable, Codable {
+    case month
+    case year
+    var name: String {
+        switch self {
+        case .month: return "month"
+        case .year: return "year"
+        }
+    }
+}
+
+enum Age: String, CaseIterable, Codable {
+    case age0
+    case age10
+    case age20
+    case age30
+    case age40
+    case age50
+    case age60
+    case age70
+    case age80
+    case age90
+    
+    var name: String {
+        switch self {
+        case .age0: return "0代"
+        case .age10: return "10代"
+        case .age20: return "20代"
+        case .age30: return "30代"
+        case .age40: return "40代"
+        case .age50: return "50代"
+        case .age60: return "60代"
+        case .age70: return "70代"
+        case .age80: return "80代"
+        case .age90: return "90代"
+        }
+    }
+    
+    var queryValue: String {
+        switch self {
+        case .age0: return "0"
+        case .age10: return "10"
+        case .age20: return "20"
+        case .age30: return "30"
+        case .age40: return "40"
+        case .age50: return "50"
+        case .age60: return "60"
+        case .age70: return "70"
+        case .age80: return "80"
+        case .age90: return "90"
+        }
+    }
+}
+
 enum Sex: String, CaseIterable, Codable {
     case M
     case W

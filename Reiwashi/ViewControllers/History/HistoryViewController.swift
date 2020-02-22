@@ -16,7 +16,7 @@ class HistoryViewController: UIViewController {
     @IBOutlet var refineButton: UIBarButtonItem!
 
     private let disposeBag = DisposeBag()
-    private let viewModel: ViewModel
+    let viewModel: ViewModel
     
     init() {
         self.viewModel = ViewModel()
@@ -48,7 +48,9 @@ class HistoryViewController: UIViewController {
     }
     
     func bind() {
-        viewModel.action.elements.bind(to: tableView.rx.items(cellIdentifier: "NormalTableViewCell", cellType: NormalTableViewCell.self)) { row, element, cell in
+        viewModel.action.elements
+            .debug()
+            .bind(to: tableView.rx.items(cellIdentifier: "NormalTableViewCell", cellType: NormalTableViewCell.self)) { row, element, cell in
             cell.word = element
             cell.config()
         }
@@ -64,7 +66,7 @@ class HistoryViewController: UIViewController {
         
         refineButton.rx.tap
             .subscribe(onNext: {
-                let refineViewController = RefineViewController()
+                let refineViewController = RefineViewController(viewController: self)
                 self.present(refineViewController, animated: true, completion: nil)
         })
         .disposed(by: disposeBag)
