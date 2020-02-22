@@ -40,6 +40,8 @@ class NormalTableViewCell: UITableViewCell {
         formatter.dateFormat = DateFormatter.dateFormat(fromTemplate: "ydMMM", options: 0, locale: Locale(identifier: "ja_JP"))
         dateLabel.text = formatter.string(from: Date())
         self.fabImageView.image = !self.word.isFab ? UIImage.init(systemName: "star") : UIImage.init(systemName: "star.fill")
+        fabImageView.tintColor = UIColor(red: 124/255, green: 75/255, blue: 141/255, alpha: 1.0)
+
     }
     
     @IBAction func fabButton() {
@@ -54,7 +56,7 @@ class NormalTableViewCell: UITableViewCell {
             word.fabCount += 1
             addAction.execute(AddFabDataGatewayAction.Input(wordId: word.id))
         }
-        UIView.transition(with: fabImageView, duration: 0.5, options: [.transitionCrossDissolve], animations: {
+        UIView.transition(with: fabImageView, duration: 0.3, options: [.transitionCrossDissolve], animations: {
             self.fabImageView.image = self.word.isFab ? UIImage.init(systemName: "star") : UIImage.init(systemName: "star.fill")
         })
         word.isFab.toggle()

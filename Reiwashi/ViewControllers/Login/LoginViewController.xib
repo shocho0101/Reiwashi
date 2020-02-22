@@ -21,28 +21,44 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="メールアドレス" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3El-aW-dj1">
-                    <rect key="frame" x="70" y="187" width="274" height="34"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="メールアドレス" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3El-aW-dj1">
+                    <rect key="frame" x="70" y="144" width="274" height="34"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="274" id="qD8-OX-56X"/>
+                    </constraints>
                     <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="17"/>
                     <textInputTraits key="textInputTraits" textContentType="email"/>
                 </textField>
-                <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="パスワード" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JQo-Kx-n5Y">
-                    <rect key="frame" x="70" y="250" width="274" height="34"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="パスワード" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JQo-Kx-n5Y">
+                    <rect key="frame" x="70" y="208" width="274" height="34"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="274" id="L9O-ke-5TI"/>
+                    </constraints>
                     <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="17"/>
                     <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                 </textField>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Oh-mR-Pep">
-                    <rect key="frame" x="159" y="312" width="97" height="37"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" name="HiraMinProN-W6" family="Hiragino Mincho ProN" pointSize="25"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Oh-mR-Pep">
+                    <rect key="frame" x="157" y="322" width="100" height="40"/>
+                    <color key="backgroundColor" name="MainColor"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="100" id="COs-yg-l8h"/>
+                        <constraint firstAttribute="height" constant="40" id="HpD-2H-9ys"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="HiraMinProN-W6" family="Hiragino Mincho ProN" pointSize="17"/>
                     <state key="normal" title="ログイン">
-                        <color key="titleColor" name="MainColor"/>
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
                 </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="3El-aW-dj1" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="100" id="2Ez-n1-kfj"/>
+                <constraint firstItem="0Oh-mR-Pep" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="6CN-cO-3Ol"/>
+                <constraint firstItem="JQo-Kx-n5Y" firstAttribute="top" secondItem="3El-aW-dj1" secondAttribute="bottom" constant="30" id="9xS-Pd-mUo"/>
+                <constraint firstItem="JQo-Kx-n5Y" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="VMa-Di-fAv"/>
+                <constraint firstItem="3El-aW-dj1" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="bF4-TC-r5O"/>
+                <constraint firstItem="0Oh-mR-Pep" firstAttribute="top" secondItem="JQo-Kx-n5Y" secondAttribute="bottom" constant="80" id="kwc-Bb-hjj"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="137.68115942028987" y="153.34821428571428"/>
         </view>

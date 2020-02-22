@@ -20,25 +20,29 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kUz-Oe-2wJ">
-                    <rect key="frame" x="24" y="260" width="366" height="36"/>
+                    <rect key="frame" x="24" y="144" width="366" height="36"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="36" id="Az3-mJ-19D"/>
+                        <constraint firstAttribute="width" constant="366" id="2jb-Vz-94F"/>
+                        <constraint firstAttribute="height" constant="36" id="c1g-xF-Z6j"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cMM-Tf-hQg">
-                    <rect key="frame" x="191.5" y="326" width="31" height="30"/>
+                    <rect key="frame" x="157" y="280" width="100" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="mls-h8-vrJ"/>
+                        <constraint firstAttribute="width" constant="100" id="xhK-G3-kfu"/>
+                    </constraints>
                     <state key="normal" title="追加"/>
                 </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="cMM-Tf-hQg" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="4vv-7P-zKK"/>
-                <constraint firstItem="kUz-Oe-2wJ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="24" id="DYK-s9-08b"/>
-                <constraint firstItem="cMM-Tf-hQg" firstAttribute="top" secondItem="kUz-Oe-2wJ" secondAttribute="bottom" constant="30" id="TRz-tG-djF"/>
-                <constraint firstAttribute="trailing" secondItem="kUz-Oe-2wJ" secondAttribute="trailing" constant="24" id="eoy-Di-u9X"/>
-                <constraint firstItem="kUz-Oe-2wJ" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="216" id="laB-xX-et8"/>
+                <constraint firstItem="kUz-Oe-2wJ" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="100" id="1GZ-6r-PF6"/>
+                <constraint firstItem="kUz-Oe-2wJ" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="P3E-24-GNO"/>
+                <constraint firstItem="cMM-Tf-hQg" firstAttribute="top" secondItem="kUz-Oe-2wJ" secondAttribute="bottom" constant="100" id="QT1-S6-DXN"/>
+                <constraint firstItem="cMM-Tf-hQg" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="xyv-yh-FFw"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="137.68115942028987" y="140.625"/>

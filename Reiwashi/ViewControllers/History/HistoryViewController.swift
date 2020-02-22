@@ -45,6 +45,8 @@ class HistoryViewController: UIViewController {
         title = "令和史"
         tableView.register(UINib(nibName: "NormalTableViewCell", bundle: nil), forCellReuseIdentifier: "NormalTableViewCell")
         tableView.rowHeight = 70
+        tableView.separatorColor = UIColor(red: 124/255, green: 75/255, blue: 141/255, alpha: 1.0)
+
     }
     
     func bind() {

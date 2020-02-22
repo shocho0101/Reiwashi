@@ -32,11 +32,19 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func switchViewControllers() {
         
         let modalTabBarController = ModalTabBarController()
+        
         let historyNavigationController = UINavigationController(rootViewController: HistoryViewController())
+        historyNavigationController.navigationBar.tintColor = UIColor(red: 124/255, green: 75/255, blue: 141/255, alpha: 1.0)
+        historyNavigationController.navigationBar.titleTextAttributes = [.foregroundColor: UIColor(red: 124/255, green: 75/255, blue: 141/255, alpha: 1.0)]
+        
         let myPageNavigationController = UINavigationController(rootViewController: MyPageViewController())
+        myPageNavigationController.navigationBar.tintColor = UIColor(red: 124/255, green: 75/255, blue: 141/255, alpha: 1.0)
+        myPageNavigationController.navigationBar.titleTextAttributes = [.foregroundColor: UIColor(red: 124/255, green: 75/255, blue: 141/255, alpha: 1.0)]
+        
         let viewControllers = [historyNavigationController, AddHistoryViewController(), myPageNavigationController]
         modalTabBarController.setViewControllers(viewControllers, animated: true)
         modalTabBarController.selectedIndex = 0
+        modalTabBarController.setUpTabBar()
         window?.rootViewController = modalTabBarController
         
     }
