@@ -36,6 +36,10 @@ class HistoryViewController: UIViewController {
         setUp()
         bind()
         viewModel.initRequest()
+        
+        tableView.refreshControl = UIRefreshControl()
+        tableView.refreshControl?.addTarget(self, action: #selector(refresh(sender:)), for: .valueChanged)
+        
 //        viewModel.action.execute(GetHistoryDataGatewayAction.Input(period: .month, page: 1))
     }
     
@@ -74,6 +78,16 @@ class HistoryViewController: UIViewController {
         })
         .disposed(by: disposeBag)
         
+        viewModel.finishReload
+            .drive(onNext: { [tableView] in
+            tableView?.refreshControl?.endRefreshing()
+        })
+        .disposed(by: disposeBag)
+        
+    }
+    
+    @objc func refresh(sender: UIRefreshControl) {
+        viewModel.refresh()
     }
 }
 

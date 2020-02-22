@@ -63,6 +63,21 @@ extension HistoryViewController {
                 .asDriver(onErrorDriveWith: .empty())
         }
         
+        var finishReload: Driver<Void> {
+            return action.executing
+                .filter { !$0 }
+                .map { _ in () }
+                .asDriver(onErrorDriveWith: .empty())
+        }
+        
+        func refresh() {
+            action.execute(GetHistoryDataGatewayAction.Input(period: state.value.period,
+                                                             age: state.value.age,
+                                                             sex: state.value.sex,
+                                                             place: state.value.place,
+                                                             page: state.value.page))
+            
+        }
         
         
         
