@@ -57,6 +57,8 @@ enum GetHistoryDataGatewayAction: DataGatewayAction {
                                 observer.onCompleted()
                             })
                         
+                    }, onError: {
+                        observer.onError($0)
                     })
             }
         }
