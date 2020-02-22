@@ -23,6 +23,7 @@ enum SignUpDataGatewayAction: DataGatewayAction {
     
     private struct Response: Codable {
         let status: Status
+        let userId: Int?
         let token: String?
         
         enum Status: String, Codable {

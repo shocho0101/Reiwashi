@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -19,32 +20,62 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tPC-Mq-zry">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="694"/>
+                    <color key="backgroundColor" name="MainColor"/>
+                </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nKK-hr-7if">
-                    <rect key="frame" x="176" y="706" width="62" height="30"/>
-                    <state key="normal" title="ログイン"/>
+                    <rect key="frame" x="24" y="718" width="366" height="60"/>
+                    <color key="backgroundColor" name="MainColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="n2S-qx-iaI"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="22"/>
+                    <state key="normal" title="ログイン">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xku-fg-8Im">
-                    <rect key="frame" x="176" y="772" width="62" height="30"/>
-                    <state key="normal" title="新規登録"/>
+                    <rect key="frame" x="24" y="790" width="366" height="60"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="X6u-9s-nIc"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="22"/>
+                    <state key="normal" title="新規登録">
+                        <color key="titleColor" name="MainColor"/>
+                    </state>
                 </button>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="令和史へようこそ！" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GZ6-jO-lOe">
-                    <rect key="frame" x="129" y="284" width="156" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="令和史" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GZ6-jO-lOe">
+                    <rect key="frame" x="91.5" y="248" width="231" height="77"/>
+                    <fontDescription key="fontDescription" name="HiraMinProN-W6" family="Hiragino Mincho ProN" pointSize="77"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="xku-fg-8Im" secondAttribute="bottom" constant="60" id="Hqg-na-Hul"/>
+                <constraint firstItem="tPC-Mq-zry" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="5i9-EJ-FMv"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="xku-fg-8Im" secondAttribute="bottom" constant="12" id="Hqg-na-Hul"/>
+                <constraint firstItem="tPC-Mq-zry" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="IIo-Y0-Q5b"/>
                 <constraint firstItem="GZ6-jO-lOe" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="K0o-yy-jsP"/>
-                <constraint firstItem="GZ6-jO-lOe" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="240" id="LGp-UT-zag"/>
-                <constraint firstItem="xku-fg-8Im" firstAttribute="top" secondItem="nKK-hr-7if" secondAttribute="bottom" constant="36" id="UR7-G3-AFb"/>
+                <constraint firstItem="GZ6-jO-lOe" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="204" id="LGp-UT-zag"/>
+                <constraint firstItem="xku-fg-8Im" firstAttribute="top" secondItem="nKK-hr-7if" secondAttribute="bottom" constant="12" id="UR7-G3-AFb"/>
+                <constraint firstItem="nKK-hr-7if" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="VRC-Cl-CPP"/>
+                <constraint firstItem="tPC-Mq-zry" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="aki-dV-sAT"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="nKK-hr-7if" secondAttribute="trailing" constant="24" id="dwk-0F-xDO"/>
+                <constraint firstItem="xku-fg-8Im" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="gbe-rX-iPC"/>
                 <constraint firstItem="xku-fg-8Im" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="nzG-z9-xGc"/>
                 <constraint firstItem="nKK-hr-7if" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="pkt-t5-yEM"/>
+                <constraint firstItem="nKK-hr-7if" firstAttribute="top" secondItem="tPC-Mq-zry" secondAttribute="bottom" constant="24" id="tTh-sz-k8z"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="xku-fg-8Im" secondAttribute="trailing" constant="24" id="ymq-qH-nfu"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <point key="canvasLocation" x="139" y="111"/>
+            <point key="canvasLocation" x="137.68115942028987" y="110.49107142857143"/>
         </view>
     </objects>
+    <resources>
+        <namedColor name="MainColor">
+            <color red="0.48600000143051147" green="0.29399999976158142" blue="0.55299997329711914" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>
