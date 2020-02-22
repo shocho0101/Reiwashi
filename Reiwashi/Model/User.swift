@@ -17,7 +17,9 @@ enum Period: String, CaseIterable, Codable {
         case .year: return "year"
         }
     }
-    
+}
+
+
 struct User: Codable {
     var name: String
     var email: String
@@ -129,7 +131,7 @@ enum Place: String, CaseIterable, Codable {
     case miyazaki
     case kagoshima
     case okinawa
-   
+    
     var name: String {
         switch self {
         case .hokkaido: return "北海道"
