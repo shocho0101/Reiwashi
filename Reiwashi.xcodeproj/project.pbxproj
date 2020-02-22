@@ -171,7 +171,7 @@
 		CADAB31B23FE73A700B3BC3A /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
 		CADB139623FBF0B5002B453A /* RxAlamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxAlamofire.framework; path = Carthage/Build/iOS/RxAlamofire.framework; sourceTree = "<group>"; };
 		CADB139923FBF156002B453A /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
-		CAFE98C923F78DC400F19152 /* Reiwashi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Reiwashi.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CAFE98C923F78DC400F19152 /* 令和史.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "令和史.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAFE98CC23F78DC400F19152 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CAFE98CE23F78DC400F19152 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		CAFE98D523F78DC700F19152 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -377,7 +377,7 @@
 		CAFE98CA23F78DC400F19152 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CAFE98C923F78DC400F19152 /* Reiwashi.app */,
+				CAFE98C923F78DC400F19152 /* 令和史.app */,
 				CAFE98DF23F78DC700F19152 /* ReiwashiTests.xctest */,
 				CAFE98EA23F78DC700F19152 /* ReiwashiUITests.xctest */,
 			);
@@ -485,7 +485,7 @@
 			);
 			name = Reiwashi;
 			productName = Reiwashi;
-			productReference = CAFE98C923F78DC400F19152 /* Reiwashi.app */;
+			productReference = CAFE98C923F78DC400F19152 /* 令和史.app */;
 			productType = "com.apple.product-type.application";
 		};
 		CAFE98DE23F78DC700F19152 /* ReiwashiTests */ = {
@@ -875,7 +875,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "jp.2222-d.Reiwashi";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "令和史";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -897,7 +897,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "jp.2222-d.Reiwashi";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "令和史";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
