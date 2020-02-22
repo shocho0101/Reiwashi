@@ -13,8 +13,8 @@ enum Period: String, CaseIterable, Codable {
     case year
     var name: String {
         switch self {
-        case .month: return "month"
-        case .year: return "year"
+        case .month: return "月間ランキング"
+        case .year: return "年間ランキング"
         }
     }
 }
@@ -42,7 +42,7 @@ enum Age: String, CaseIterable, Codable {
     
     var name: String {
         switch self {
-        case .age0: return "0代"
+        case .age0: return "10歳未満"
         case .age10: return "10代"
         case .age20: return "20代"
         case .age30: return "30代"

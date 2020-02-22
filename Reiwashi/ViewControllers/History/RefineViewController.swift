@@ -34,6 +34,7 @@ class RefineViewController: UIViewController {
         let toolbar = UIToolbar(frame: CGRect(x: 0, y: 0, width: view.frame.size.width, height: 45))
         let spaceItem = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: self, action: nil)
         let doneButtonItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(periodPickerViewDone))
+        doneButtonItem.tintColor = #colorLiteral(red: 0.4860000014, green: 0.2939999998, blue: 0.5529999733, alpha: 1)
         toolbar.setItems([spaceItem, doneButtonItem], animated: true)
         return toolbar
     }()
@@ -49,6 +50,7 @@ class RefineViewController: UIViewController {
         let toolbar = UIToolbar(frame: CGRect(x: 0, y: 0, width: view.frame.size.width, height: 45))
         let spaceItem = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: self, action: nil)
         let doneButtonItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(agePickerViewDone))
+        doneButtonItem.tintColor = #colorLiteral(red: 0.4860000014, green: 0.2939999998, blue: 0.5529999733, alpha: 1)
         toolbar.setItems([spaceItem, doneButtonItem], animated: true)
         return toolbar
     }()
@@ -64,6 +66,7 @@ class RefineViewController: UIViewController {
         let toolbar = UIToolbar(frame: CGRect(x: 0, y: 0, width: view.frame.size.width, height: 45))
         let spaceItem = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: self, action: nil)
         let doneButtonItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(sexPickerViewDone))
+        doneButtonItem.tintColor = #colorLiteral(red: 0.4860000014, green: 0.2939999998, blue: 0.5529999733, alpha: 1)
         toolbar.setItems([spaceItem, doneButtonItem], animated: true)
         return toolbar
     }()
@@ -81,6 +84,7 @@ class RefineViewController: UIViewController {
         let toolbar = UIToolbar(frame: CGRect(x: 0, y: 0, width: view.frame.size.width, height: 45))
         let spaceItem = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: self, action: nil)
         let doneButtonItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(placePickerViewDone))
+        doneButtonItem.tintColor = #colorLiteral(red: 0.4860000014, green: 0.2939999998, blue: 0.5529999733, alpha: 1)
         toolbar.setItems([spaceItem, doneButtonItem], animated: true)
         return toolbar
     }()
@@ -145,8 +149,8 @@ class RefineViewController: UIViewController {
         ageTextField.text = state.value.age?.name ?? "選択なし"
         sexTextField.text = state.value.sex?.name ?? "選択なし"
         placeTextField.text = state.value.place?.name ?? "選択なし"
+        
     }
-    
 }
 
 
