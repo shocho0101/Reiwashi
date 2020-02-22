@@ -36,6 +36,18 @@ class WelcomeViewController: UIViewController {
         signInButton.rx.tap.asDriver().drive(onNext: { [navigationController] _ in
             navigationController?.pushViewController(SignInViewController(), animated: true)
         }).disposed(by: disposeBag)
+        
+        setupUI()
+    }
+    
+    func setupUI() {
+        loginButton.layer.cornerRadius = 5
+        signInButton.layer.cornerRadius = 5
+        signInButton.layer.borderColor = #colorLiteral(red: 0.4860000014, green: 0.2939999998, blue: 0.5529999733, alpha: 1)
+        signInButton.layer.borderWidth = 1
+        
+        navigationController!.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        navigationController!.navigationBar.shadowImage = UIImage()
     }
     
 }
