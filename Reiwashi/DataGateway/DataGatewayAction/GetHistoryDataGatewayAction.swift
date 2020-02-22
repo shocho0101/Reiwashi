@@ -34,11 +34,11 @@ enum GetHistoryDataGatewayAction: DataGatewayAction {
                 }
                 var placePath = ""
                 if let place = input.place {
-                    placePath = "&sex=" + place.rawValue
+                    placePath = "&place=" + place.rawValue
                 }
                 let pagePath = "&page=" + input.page.description
                 print("words/api" + periodPath + agePath + sexPath + placePath + pagePath)
-                return APIClient.request(.get, path: "words/api" + periodPath + sexPath + placePath + pagePath , needAuth: false, responseType: History.self)
+                return APIClient.request(.get, path: "words/api" + periodPath + agePath + sexPath + placePath + pagePath , needAuth: false, responseType: History.self)
                     .subscribe(onNext: { history in
                         APIClient.request(.get, path: "fabs/mypage", needAuth: true, responseType: [Fab].self)
                             .subscribe(onNext: { fabs in

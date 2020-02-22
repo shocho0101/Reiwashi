@@ -48,7 +48,7 @@ class RefineViewController: UIViewController {
     lazy var agePickerViewToolbar: UIToolbar = {
         let toolbar = UIToolbar(frame: CGRect(x: 0, y: 0, width: view.frame.size.width, height: 45))
         let spaceItem = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: self, action: nil)
-        let doneButtonItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(placePickerViewDone))
+        let doneButtonItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(agePickerViewDone))
         toolbar.setItems([spaceItem, doneButtonItem], animated: true)
         return toolbar
     }()
@@ -108,7 +108,7 @@ class RefineViewController: UIViewController {
         placeTextField.inputView = placePickerView
         placeTextField.inputAccessoryView = placePickerViewToolbar
         bind()
-        
+        setUp()
     }
     
     @objc func periodPickerViewDone() {
@@ -137,6 +137,14 @@ class RefineViewController: UIViewController {
         refineButton.rx.tap
             .bind(to: viewModel.refineButtonTapped)
             .disposed(by: disposeBag)
+    }
+    
+    func setUp() {
+        let state = historyViewController.viewModel.state
+        periodTextField.text = state.value.period.name
+        ageTextField.text = state.value.age?.name ?? "選択なし"
+        sexTextField.text = state.value.sex?.name ?? "選択なし"
+        placeTextField.text = state.value.place?.name ?? "選択なし"
     }
     
 }

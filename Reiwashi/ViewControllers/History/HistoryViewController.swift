@@ -48,7 +48,8 @@ class HistoryViewController: UIViewController {
     }
     
     func bind() {
-        viewModel.action.elements
+        
+        Observable.merge(viewModel.action.elements, viewModel.action.errors.map {_ in [Word]()})
             .debug()
             .bind(to: tableView.rx.items(cellIdentifier: "NormalTableViewCell", cellType: NormalTableViewCell.self)) { row, element, cell in
             cell.word = element
