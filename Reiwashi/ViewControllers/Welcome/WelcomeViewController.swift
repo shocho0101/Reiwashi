@@ -48,6 +48,7 @@ class WelcomeViewController: UIViewController {
         
         navigationController!.navigationBar.setBackgroundImage(UIImage(), for: .default)
         navigationController!.navigationBar.shadowImage = UIImage()
+        navigationController!.navigationBar.tintColor = #colorLiteral(red: 0.4860000014, green: 0.2939999998, blue: 0.5529999733, alpha: 1)
     }
     
 }

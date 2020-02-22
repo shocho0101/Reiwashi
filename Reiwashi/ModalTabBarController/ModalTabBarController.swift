@@ -13,6 +13,28 @@ class ModalTabBarController: UITabBarController {
     override func viewDidLoad() {
         delegate = self
     }
+    
+    func setUpTabBar(){
+        tabBar.tintColor = UIColor(red: 124/255, green: 75/255, blue: 141/255, alpha: 1.0)
+        let maxNum = viewControllers?.count ?? 0
+        for i in 0..<maxNum {
+            let tabBarItem = tabBar.items?[i]
+            switch i {
+            case 0:
+                tabBarItem?.title = "令和史"
+                tabBarItem?.image = UIImage(systemName: "map")
+            case 1:
+                tabBarItem?.title = "追加"
+                tabBarItem?.image = UIImage(systemName: "plus.square")
+            case 2:
+                tabBarItem?.title = "マイページ"
+                tabBarItem?.image = UIImage(systemName: "person.crop.square")
+            default:
+                break
+            }
+        }
+    }
+
 }
 
 extension ModalTabBarController: UITabBarControllerDelegate {
