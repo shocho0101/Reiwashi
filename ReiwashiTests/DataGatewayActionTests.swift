@@ -93,5 +93,22 @@ class DataGatewayActionTests: XCTestCase {
         wait(for: [exp], timeout: 5)
     }
     
+    func testGetUserInfo() {
+        let exp = expectation(description: "api")
+        
+        let action = GetUserInfoDataGatewayAction.api()
+        
+        action.execute(())
+            .subscribe(onNext: { response in
+                print(response)
+                exp.fulfill()
+            }, onError: { error in
+                print(error)
+            })
+            .disposed(by: disposeBag)
+        
+        wait(for: [exp], timeout: 5)
+    }
+    
     
 }

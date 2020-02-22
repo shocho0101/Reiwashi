@@ -8,6 +8,15 @@
 
 import Foundation
 
+struct User: Codable {
+    var name: String
+    var email: String
+    var sex: Sex
+    var birthday: String
+    var place: Place
+}
+
+
 enum Sex: String, CaseIterable, Codable {
     case M
     case W

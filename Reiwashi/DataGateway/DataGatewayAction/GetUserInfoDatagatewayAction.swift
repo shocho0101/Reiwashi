@@ -10,19 +10,9 @@ import Action
 import RxSwift
 
 enum GetUserInfoDataGatewayAction: DataGatewayAction {
-    
-    struct Output: Codable {
-        var name: String
-        var email: String
-        var sex: Sex
-        var birthday: Date
-        var place: Place
-    }
-    
-    // user_idを付与しないといけないので今の所使えない。サーバーの仕様を確認する必要あり。
-    static func api() -> Action<Void, Output> {
-        return .init { _ -> Observable<Output> in
-            return APIClient.request(.get, path: "users", needAuth: true, responseType: Output.self)
+    static func api() -> Action<Void, User> {
+        return .init { _ -> Observable<User> in
+            return APIClient.request(.get, path: "users/1", needAuth: true, responseType: User.self)
         }
     }
 }

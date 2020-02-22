@@ -12,6 +12,12 @@ import RxCocoa
 
 class MyPageViewController: UIViewController {
     
+    @IBOutlet var nameLabel: UILabel!
+    @IBOutlet var emailLabel: UILabel!
+    @IBOutlet var sexLabel: UILabel!
+    @IBOutlet var birthdayLabel: UILabel!
+    @IBOutlet var placeLabel: UILabel!
+    
     @IBOutlet var logoutButton: UIButton!
     
     private let disposeBag = DisposeBag()
@@ -34,10 +40,11 @@ class MyPageViewController: UIViewController {
         title = "マイページ"
         
         bind()
+        viewModel.firstRequest()
     }
     
     func bind() {
-        
+        // ViewController → ViewModel
         logoutButton.rx.tap
             .bind(to: viewModel.logoutAction.inputs)
             .disposed(by: disposeBag)
@@ -50,6 +57,31 @@ class MyPageViewController: UIViewController {
                 sceneDelegate.switchWelcome()
             })
             .disposed(by: disposeBag)
+        
+        // ViewModel　→ ViewController
+        viewModel.name
+            .drive(nameLabel.rx.text)
+            .disposed(by: disposeBag)
+        
+        viewModel.email
+            .drive(emailLabel.rx.text)
+            .disposed(by: disposeBag)
+        
+        viewModel.birthday
+            .drive(birthdayLabel.rx.text)
+            .disposed(by: disposeBag)
+        
+        viewModel.sex
+            .map { $0.name }
+            .drive(sexLabel.rx.text)
+            .disposed(by: disposeBag)
+        
+        viewModel.place
+            .map { $0.name }
+            .drive(placeLabel.rx.text)
+            .disposed(by: disposeBag)
+        
+        viewModel.getUserInfoAction.execute()
     }
 }
 
